@@ -1,0 +1,185 @@
+Starting negotiation session.
+
+Round 1
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Tent, Invitations: Photo, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 2
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Party Tent, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Plain, Music: MP3, Cleanup: Water and Soap])
+Round 3
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 4
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Tent, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 5
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Hired Help])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 6
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 7
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Water and Soap])
+Round 8
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 9
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Ballroom, Invitations: Plain, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 10
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Hired Help])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])
+Round 11
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 12
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Catering, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])
+Round 13
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Handmade, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: Band, Cleanup: Water and Soap])
+Round 14
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 15
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Tent, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Plain, Music: Band, Cleanup: Water and Soap])
+Round 16
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 17
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Plain, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 18
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Tent, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 19
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])
+Round 20
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 21
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Water and Soap])
+Round 22
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 23
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 24
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Tent, Invitations: Photo, Music: DJ, Cleanup: Hired Help])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Non-Alcoholic, Location: Party Room, Invitations: Plain, Music: MP3, Cleanup: Water and Soap])
+Round 25
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Handmade, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Plain, Music: MP3, Cleanup: Water and Soap])
+Round 26
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 27
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])
+Round 28
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Catering, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 29
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Catering, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Handmade, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Photo, Music: MP3, Cleanup: Hired Help])
+Round 30
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Photo, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 31
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 32
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 33
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 34
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Handmade, Music: MP3, Cleanup: Water and Soap])
+Round 35
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Photo, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])
+Round 36
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 37
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])
+Round 38
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+Round 39
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])
+Round 40
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Party Tent, Invitations: Plain, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 41
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Tent, Invitations: Custom, Handmade, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 42
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: Band, Cleanup: Hired Help])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 43
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Ballroom, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 44
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Handmade, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Water and Soap])
+Round 45
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Non-Alcoholic, Location: Party Room, Invitations: Plain, Music: MP3, Cleanup: Water and Soap])
+Round 46
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Ballroom, Invitations: Photo, Music: DJ, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: MP3, Cleanup: Water and Soap])
+Round 47
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 48
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Ballroom, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: Band, Cleanup: Water and Soap])
+Round 49
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: MP3, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Non-Alcoholic, Location: Party Room, Invitations: Plain, Music: MP3, Cleanup: Water and Soap])
+Round 50
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+Round 51
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Tent, Invitations: Plain, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])
+Round 52
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Handmade Food, Drinks: Non-Alcoholic, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 53
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Special Equiment])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Hired Help])
+Round 54
+ Turn 1:RandomBidderExample@2  (Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Water and Soap])
+ Turn 2:RandomBidderExample@3  (Offer  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Round 55
+ Turn 1:RandomBidderExample@2  (Accept  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])
+Found an agreement: Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]
+Finished negotiation session in 0.359016633 s.
+Time (s):		0.359016633
+Rounds:		55
+Agreement?:		Yes
+Discounted?:		No
+Number of parties:		2
+Min. utility:		0.62667
+Max. utility:		0.87606
+Distance to pareto:	0.12792
+Distance to Nash:	0.16681
+Social welfare:		1.50273
+Opposition:		0.20880
+Agent utility:		0.62667 (RandomBidderExample@2)
+Agent utility:		0.87606 (RandomBidderExample@3)
+User bother:		0.00000 (RandomBidderExample@2)
+User bother:		0.00000 (RandomBidderExample@3)
+User utility:		0.62667 (RandomBidderExample@2)
+User utility:		0.87606 (RandomBidderExample@3)
