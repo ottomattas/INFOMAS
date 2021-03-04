@@ -1,0 +1,179 @@
+Starting negotiation session.
+
+Round 1
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 2
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 3
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 4
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 5
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 6
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 7
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 8
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 9
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 10
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 11
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 12
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 13
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 14
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 15
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 16
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 17
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 18
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 19
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 20
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 21
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 22
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 23
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 24
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 25
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 26
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 27
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 28
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 29
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 30
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 31
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 32
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 33
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 3 start hotel])
+Round 34
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 3 start hotel])
+Round 35
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 3 start hotel])
+Round 36
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: 3 start hotel])
+Round 37
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+Round 38
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+Round 39
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+Round 40
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+Round 41
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+Round 42
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+Round 43
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 1 week, Hotel quality: 5 start hotel])
+Round 44
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 1 week, Hotel quality: 5 start hotel])
+Round 45
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: 5 start hotel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 1 week, Hotel quality: 5 start hotel])
+Round 46
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: 5 start hotel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 1 week, Hotel quality: 5 start hotel])
+Round 47
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 2 weeks, Hotel quality: 3 start hotel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 1 week, Hotel quality: 5 start hotel])
+Round 48
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Antalya, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 1 week, Hotel quality: 5 start hotel])
+Round 49
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Antalya, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Milan, Duration: 1 week, Hotel quality: Hostel])
+Round 50
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: 5 start hotel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Antalya, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 51
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Barcelona, Duration: 1 week, Hotel quality: 3 start hotel])
+ Turn 2:BoulwareNegotiationParty@5  (Offer  bid:Bid[Location: Antalya, Duration: 2 weeks, Hotel quality: 5 start hotel])
+Round 52
+ Turn 1:BoulwareNegotiationParty@4  (Offer  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+ Turn 2:BoulwareNegotiationParty@5  (Accept  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])
+Found an agreement: Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel]
+Finished negotiation session in 0.494894928 s.
+Time (s):		0.494894928
+Rounds:		52
+Agreement?:		Yes
+Discounted?:		No
+Number of parties:		2
+Min. utility:		0,59874
+Max. utility:		0,93055
+Distance to pareto:	0,00000
+Distance to Nash:	0,00000
+Social welfare:		1,52929
+Opposition:		0,40723
+Agent utility:		0,59874 (BoulwareNegotiationParty@4)
+Agent utility:		0,93055 (BoulwareNegotiationParty@5)
+User bother:		0,00000 (BoulwareNegotiationParty@4)
+User bother:		0,00000 (BoulwareNegotiationParty@5)
+User utility:		0,59874 (BoulwareNegotiationParty@4)
+User utility:		0,93055 (BoulwareNegotiationParty@5)
+
+
