@@ -1,0 +1,36 @@
+<utility_space> 
+<objective name="vacation" index="0" description="" etype="objective" type="objective"> 
+<issue vtype="discrete" name="Location" index="1" etype="discrete" type="discrete"> 
+<item evaluation="4.0" index="1" value="Antalya"> 
+</item> 
+<item evaluation="10.0" index="2" value="Barcelona"> 
+</item> 
+<item evaluation="2.0" index="3" value="Milan"> 
+</item> 
+</issue> 
+<issue vtype="discrete" name="Duration" index="2" etype="discrete" type="discrete"> 
+<item evaluation="3.0" index="1" value="1 week"> 
+</item> 
+<item evaluation="10.0" index="2" value="2 weeks"> 
+</item> 
+</issue> 
+<issue vtype="discrete" name="Hotel quality" index="3" etype="discrete" type="discrete"> 
+<item evaluation="10.0" index="1" value="Hostel"> 
+</item> 
+<item evaluation="2.0" index="2" value="3 start hotel"> 
+</item> 
+<item evaluation="3.0" index="3" value="5 start hotel"> 
+</item> 
+</issue> 
+<weight index="1" value="0.5015771595794367"> 
+</weight> 
+<weight index="2" value="0.20120366211642102"> 
+</weight> 
+<weight index="3" value="0.29721917830414224"> 
+</weight> 
+</objective> 
+<discount_factor value="1.0"> 
+</discount_factor> 
+<reservation value="0.0"> 
+</reservation> 
+</utility_space> 

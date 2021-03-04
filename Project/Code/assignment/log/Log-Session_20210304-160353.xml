@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Thu Mar 04 16:03:53 CET 2021" timeOfAgreement="0.8524590163934426" lastAction="(Accept  bid:Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel])" domain="etc/templates/vacation/vacation.xml" bids="103" runtime="0.494894928" finalOutcome="Bid[Location: Milan, Duration: 2 weeks, Hotel quality: Hostel]" startingAgent="BoulwareNegotiationParty@4" deadline="60rounds">
+<resultsOfAgent agent="BoulwareNegotiationParty@4" agentDesc="Time-based agent" utilspace="etc/templates/vacation/vacation_util1.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.5987382723364506" finalUtility="0.5987382723364506" discountedUtility="0.5987382723364506" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@5" agentDesc="Time-based agent" utilspace="etc/templates/vacation/vacation_util2.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.93054981135152" finalUtility="0.93054981135152" discountedUtility="0.93054981135152" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>
