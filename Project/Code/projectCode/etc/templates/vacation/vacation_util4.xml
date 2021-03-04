@@ -22,11 +22,11 @@
 <item evaluation="null" index="3" value="5 start hotel"> 
 </item> 
 </issue> 
-<weight index="1" value="0.9995686180378007"> 
+<weight index="1" value="0.9727685811724386"> 
 </weight> 
-<weight index="2" value="2.1582384406603432E-4"> 
+<weight index="2" value="0.014144710447520685"> 
 </weight> 
-<weight index="3" value="2.1555811813326763E-4"> 
+<weight index="3" value="0.013086708380040805"> 
 </weight> 
 </objective> 
 <discount_factor value="1.0"> 
