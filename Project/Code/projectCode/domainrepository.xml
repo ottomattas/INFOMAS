@@ -744,6 +744,7 @@
                 <profile url="file:etc/templates/vacation/vacation_util1.xml"/>
                 <profile url="file:etc/templates/vacation/vacation_util2.xml"/>
                 <profile url="file:etc/templates/vacation/vacation_util3.xml"/>
+                <profile url="file:etc/templates/vacation/vacation_util4.xml"/>
             </domainRepItem>
         </domainRepItem>
         <protocolRepItem/>
