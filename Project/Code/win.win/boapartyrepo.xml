@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<boaPartiesList>
+    <boaparties partyName="win.win_Otto">
+        <properties/>
+        <biddingStrategy>
+            <parameters name="max" value="0.99"/>
+            <parameters name="k" value="0.0"/>
+            <parameters name="e" value="1.0"/>
+            <parameters name="min" value="0.0"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/winwin_BSTD.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/winwin_ASU.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="l" value="0.2"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/winwin_OMHH.class"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/winwin_OSBB.class"/>
+        </omStrategy>
+    </boaparties>
+</boaPartiesList>
