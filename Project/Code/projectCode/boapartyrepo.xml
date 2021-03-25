@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <boaPartiesList>
+    <boaparties partyName="OttoParty">
+        <properties/>
+        <biddingStrategy>
+            <parameters name="k" value="0.0"/>
+            <parameters name="max" value="0.99"/>
+            <parameters name="min" value="0.0"/>
+            <parameters name="e" value="1.0"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/TimeDependent_Offering.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/AC_Uncertain.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="l" value="0.2"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/HardHeadedFrequencyModel.class"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/BestBid.class"/>
+        </omStrategy>
+    </boaparties>
 </boaPartiesList>
