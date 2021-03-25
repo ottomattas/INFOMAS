@@ -111,6 +111,6 @@ public class BestBid extends OMStrategy {
 
 	@Override
 	public String getName() {
-		return "Otto BestBid";
+		return "BestBid example";
 	}
 }

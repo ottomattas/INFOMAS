@@ -87,6 +87,6 @@ public class AC_Next extends AcceptanceStrategy {
 
 	@Override
 	public String getName() {
-		return "Otto AC_Next";
+		return "AC_Next example";
 	}
 }

@@ -142,7 +142,7 @@ public class HardHeadedFrequencyModel extends OpponentModel {
 
 	@Override
 	public String getName() {
-		return "Otto HardHeaded Frequency Model";
+		return "HardHeaded Frequency Model";
 	}
 
 	@Override

@@ -155,6 +155,6 @@ public class TimeDependent_Offering extends OfferingStrategy {
 
 	@Override
 	public String getName() {
-		return "Otto TimeDependent Offering";
+		return "TimeDependent Offering example";
 	}
 }

@@ -53,6 +53,6 @@ public class AC_Uncertain extends AcceptanceStrategy {
 
 	@Override
 	public String getName() {
-		return "Otto AC uncertainty";
+		return "AC uncertainty example";
 	}
 }
