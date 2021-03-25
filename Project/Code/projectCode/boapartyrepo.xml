@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<boaPartiesList/>
+<boaPartiesList>
+    <boaparties partyName="win.win">
+        <properties/>
+        <biddingStrategy>
+            <parameters name="min" value="0.0"/>
+            <parameters name="max" value="0.99"/>
+            <parameters name="e" value="1.0"/>
+            <parameters name="k" value="0.0"/>
+            <item classpath="C:\Users\saulg\Documents\Master\Multi-Agent Systems\Assignment Code\INFOMAS\Project\Code\projectCode\target\classes\bilateralexamples\boacomponents\TimeDependent_Offering.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <parameters name="b" value="0.0"/>
+            <parameters name="a" value="1.0"/>
+            <item classpath="C:\Users\saulg\Documents\Master\Multi-Agent Systems\Assignment Code\INFOMAS\Project\Code\projectCode\target\classes\bilateralexamples\boacomponents\AC_Next.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="l" value="0.2"/>
+            <item classpath="negotiator.boaframework.opponentmodel.HardHeadedFrequencyModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="C:\Users\saulg\Documents\Master\Multi-Agent Systems\Assignment Code\INFOMAS\Project\Code\projectCode\target\classes\bilateralexamples\boacomponents\BestBid.class"/>
+        </omStrategy>
+    </boaparties>
+</boaPartiesList>
