@@ -28,7 +28,6 @@
 		<biddingstrategy description="Other - Offer decreasing utility" classpath="negotiator.boaframework.offeringstrategy.other.ChoosingAllBids"/>
 		<biddingstrategy description="2012 - CUHKAgent" classpath="negotiator.boaframework.offeringstrategy.anac2012.CUHKAgent_Offering"/>
 		<biddingstrategy description="2013 - InoxAgent_OneIssue" classpath="negotiator.boaframework.offeringstrategy.anac2013.InoxAgent_Offering_OneIssue"/>
-		<biddingstrategy description="Otto_TimeDependent_Offering" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/TimeDependent_Offering.class"/>
 		<biddingstrategy description="2012 - OMACagent" classpath="negotiator.boaframework.offeringstrategy.anac2012.OMACagent_Offering"/>
 		<biddingstrategy description="2011 - IAMHaggler2011" classpath="negotiator.boaframework.offeringstrategy.anac2011.IAMhaggler2011_Offering"/>
 		<biddingstrategy description="2011 - The Negotiator" classpath="negotiator.boaframework.offeringstrategy.anac2011.TheNegotiator_Offering"/>
@@ -39,12 +38,10 @@
 		<acceptancecondition description="2012 - BRAMAgent2" classpath="negotiator.boaframework.acceptanceconditions.anac2012.AC_BRAMAgent2"/>
 		<acceptancecondition description="2012 - AgentLG" classpath="negotiator.boaframework.acceptanceconditions.anac2012.AC_AgentLG"/>
 		<acceptancecondition description="2012 - The Negotiator Reloaded" classpath="negotiator.boaframework.acceptanceconditions.anac2012.AC_TheNegotiatorReloaded"/>
-		<acceptancecondition description="Otto_ACnext" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/AC_Next.class"/>
 		<acceptancecondition description="2011 - Agent K2" classpath="negotiator.boaframework.acceptanceconditions.anac2011.AC_AgentK2"/>
 		<acceptancecondition description="Other - Previous" classpath="negotiator.boaframework.acceptanceconditions.other.AC_Previous"/>
 		<acceptancecondition description="Multi Acceptance Criteria" classpath="genius.core.boaframework.Multi_AcceptanceCondition"/>
 		<acceptancecondition description="2012 - IAMHaggler2012" classpath="negotiator.boaframework.acceptanceconditions.anac2012.AC_IAMHaggler2012"/>
-		<acceptancecondition description="Otto_ACuncertain" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/AC_Uncertain.class"/>
 		<acceptancecondition description="Other - Uncertain" classpath="negotiator.boaframework.acceptanceconditions.other.AC_Uncertain"/>
 		<acceptancecondition description="2011 - BRAMAgent" classpath="negotiator.boaframework.acceptanceconditions.anac2011.AC_BRAMAgent"/>
 		<acceptancecondition description="2011 - Nice-Tit-For-Tat" classpath="negotiator.boaframework.acceptanceconditions.anac2011.AC_NiceTitForTat"/>
@@ -79,7 +76,6 @@
 		<opponentmodel description="AgentLG Model" classpath="negotiator.boaframework.opponentmodel.AgentLGModel"/>
 		<opponentmodel description="Perfect Model" classpath="negotiator.boaframework.opponentmodel.PerfectModel"/>
 		<opponentmodel description="The Negotiator Reloaded Model" classpath="negotiator.boaframework.opponentmodel.IAMhagglerBayesianModel"/>
-		<opponentmodel description="Otto_HardHeadedFrequencyModel" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/HardHeadedFrequencyModel.class"/>
 		<opponentmodel description="InoxAgent_OM" classpath="negotiator.boaframework.opponentmodel.InoxAgent_OM"/>
 		<opponentmodel description="FSEGA Bayesian Model" classpath="negotiator.boaframework.opponentmodel.FSEGABayesianModel"/>
 		<opponentmodel description="Perfect IAMhaggler Bay. Model" classpath="negotiator.boaframework.opponentmodel.PerfectIAMhagglerBayesianModel"/>
@@ -106,6 +102,5 @@
 		<omstrategy description="Random" classpath="negotiator.boaframework.omstrategy.NullStrategy"/>
 		<omstrategy description="Offer best n" classpath="negotiator.boaframework.omstrategy.OfferBestN"/>
 		<omstrategy description="TheFawkes" classpath="negotiator.boaframework.omstrategy.TheFawkes_OMS"/>
-		<omstrategy description="Otto_Bestbid" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/BestBid.class"/>
 	</omstrategies>
 </repository>
