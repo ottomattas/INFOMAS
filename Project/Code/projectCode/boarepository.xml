@@ -100,7 +100,6 @@
 		<omstrategy description="NTFT" classpath="negotiator.boaframework.omstrategy.NTFTstrategy"/>
 		<omstrategy description="Best bid" classpath="negotiator.boaframework.omstrategy.BestBid"/>
 		<omstrategy description="Random" classpath="negotiator.boaframework.omstrategy.NullStrategy"/>
-		<omstrategy description="BestBid.class" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/projectCode/target/classes/bilateralexamples/boacomponents/BestBid.class"/>
 		<omstrategy description="Offer best n" classpath="negotiator.boaframework.omstrategy.OfferBestN"/>
 		<omstrategy description="TheFawkes" classpath="negotiator.boaframework.omstrategy.TheFawkes_OMS"/>
 	</omstrategies>
