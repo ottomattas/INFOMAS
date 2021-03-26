@@ -13,6 +13,7 @@
 	- Package Explorer > win.win (Right Click) > Properties
 	- Java Build Path > Libraries > JRE System Library > Edit...
 	- System Library > Alternate JRE > Java [1.8*] > Finish > Apply and Close
+	<img width="1217" alt="howto" src="https://user-images.githubusercontent.com/15941300/112649018-5a619200-8e4a-11eb-967b-3cbdb98b86d4.png">
 7. Run the application in Eclipse
 	- Package Explorer > win.win (Right Click) > Run As > Java Application
 8. Select Java Application
