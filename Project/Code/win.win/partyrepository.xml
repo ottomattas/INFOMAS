@@ -444,12 +444,6 @@
             <partyRepItem classPath="negotiator.parties.FeedbackHillClimber" strategyParameters="">
                 <properties/>
             </partyRepItem>
-            <partyRepItem classPath="C:\Users\saulg\Documents\Master\Multi-Agent Systems\Assignment Code\INFOMAS\Project\Code\Test\bin\bilateralexamples\BoaPartyExample.class" strategyParameters="">
-                <properties/>
-            </partyRepItem>
-            <partyRepItem classPath="C:\Users\saulg\Documents\Master\Multi-Agent Systems\Assignment Code\INFOMAS\Project\Code\Test\bin\bilateralexamples\RandomBidderExample.class" strategyParameters="">
-                <properties/>
-            </partyRepItem>
         </partyRepItems>
         <domainRepItem/>
         <protocolRepItem/>
