@@ -23,5 +23,19 @@ We do this to allow for all team members to develop components simultaneously. A
 - BOA components: ```.Project/Code/win.win/boarepository.xml```
 - BOA parties: ```.Project/Code/win.win/boapartyrepo.xml```
 
+After you have added win.win components and created a party based on them, you should recognise the entries in the component and party listings. These listings were created based on your first run of the application:
+```
+otto@localhost % grep -R winwin Project/Code/win.win/boa*
+Project/Code/win.win/boapartyrepo.xml:            <item classpath="localhost/Project/Code/win.win/bin/winwin_BSTD.class"/>
+Project/Code/win.win/boapartyrepo.xml:            <item classpath="localhost/Project/Code/win.win/bin/winwin_ASU.class"/>
+Project/Code/win.win/boapartyrepo.xml:            <item classpath="localhost/Project/Code/win.win/bin/winwin_OMHH.class"/>
+Project/Code/win.win/boapartyrepo.xml:            <item classpath="localhost/Project/Code/win.win/bin/winwin_OSBB.class"/>
+Project/Code/win.win/boarepository.xml:		<biddingstrategy description="winwin_BSTD" classpath="localhost/Project/Code/win.win/bin/winwin_BSTD.class"/>
+Project/Code/win.win/boarepository.xml:		<acceptancecondition description="winwin_ASU" classpath="localhost/Project/Code/win.win/bin/winwin_ASU.class"/>
+Project/Code/win.win/boarepository.xml:		<acceptancecondition description="winwin_ASN" classpath="localhost/Project/Code/win.win/bin/winwin_ASN.class"/>
+Project/Code/win.win/boarepository.xml:		<opponentmodel description="winwin_OMHH" classpath="localhost/Project/Code/win.win/bin/winwin_OMHH.class"/>
+Project/Code/win.win/boarepository.xml:		<omstrategy description="winwin_OSBB" classpath="localhost/Project/Code/win.win/bin/winwin_OSBB.class"/>
+```
+
 ## More resources
 https://tracinsy.ewi.tudelft.nl/pubtrac/Genius/browser
