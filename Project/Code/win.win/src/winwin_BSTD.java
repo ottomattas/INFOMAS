@@ -1,5 +1,7 @@
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 import genius.core.bidding.BidDetails;
@@ -10,6 +12,7 @@ import genius.core.boaframework.OMStrategy;
 import genius.core.boaframework.OfferingStrategy;
 import genius.core.boaframework.OpponentModel;
 import genius.core.boaframework.SortedOutcomeSpace;
+import genius.core.misc.Range;
 
 /**
  * This is an abstract class used to implement a TimeDependentAgent Strategy
@@ -75,9 +78,17 @@ public class winwin_BSTD extends OfferingStrategy {
 		}
 	}
 
+	/**
+	 * determineOpeningBid creates a list of bids within the range of 0.7 and 0.8
+	 * and selects a random bid from this created sublist, which is returned and
+	 * used as opening bid. 
+	 */
 	@Override
 	public BidDetails determineOpeningBid() {
-		return determineNextBid();
+		Range r = new Range(0.7,0.8);
+		List<BidDetails> t = outcomespace.getBidsinRange(r);
+		Random Rand = new Random();
+		return t.get(Rand.nextInt(t.size()));
 	}
 
 	/**
