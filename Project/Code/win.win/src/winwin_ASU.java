@@ -17,6 +17,12 @@ import genius.core.uncertainty.UserModel;
  */
 public class winwin_ASU extends AcceptanceStrategy {
 
+	/*
+	 * TODO: this function should return Actions.Accept if and only if
+	 * AC_combined-init is true (refer to report 2 for a specific description)
+	 * for each individual Acceptance condition, there are seperate functions
+	 * defined below. 
+	 */
 	@Override
 	public Actions determineAcceptability() {
 		Bid receivedBid = negotiationSession.getOpponentBidHistory()
@@ -47,6 +53,40 @@ public class winwin_ASU extends AcceptanceStrategy {
 			}
 		}
 		return Actions.Reject;
+	}
+	
+	/*
+	 * TODO: This function should look towards the current bid that has been created
+	 * by our agent and the bid that we have just received from the opponent. If the 
+	 * utility of the opponents bid is higher than our bid, return true, otherwise, 
+	 * return false.
+	 */
+	public boolean Acceptance_Next()
+	{
+		return false;
+	}
+	
+	/*
+	 * TODO: this function should return true if the utility of the received bid 
+	 * is higher than some tbd value.The utility that determines this can (and 
+	 * quite possibly, should) be dynamic and decreases over time. In the earlier
+	 * stages of a negotiation, this should be some constant high utility, in such
+	 * a way that it accepts any bid with a utility higher than 0.8, but should become
+	 * lower as time passes. 
+	 */
+	public boolean Acceptance_Const()
+	{
+		return false;
+	}
+	
+	
+	/*
+	 * TODO: return true if the current time is past some point T. We should be able to 
+	 * change this T after experimentation and to find the best T possible. 
+	 */
+	public boolean Acceptance_Time()
+	{
+		return false;
 	}
 
 	@Override
