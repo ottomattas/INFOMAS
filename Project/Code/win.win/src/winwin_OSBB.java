@@ -24,6 +24,7 @@ public class winwin_OSBB extends OMStrategy {
 	 * exactly one as a match sometimes lasts slightly longer.
 	 */
 	double updateThreshold = 1.1;
+	List<BidDetails> ParetoFrontier;
 
 	/**
 	 * Initializes the opponent model strategy. If a value for the parameter t
@@ -87,6 +88,14 @@ public class winwin_OSBB extends OMStrategy {
 			return allBids.get(r.nextInt(allBids.size()));
 		}
 		return bestBid;
+	}
+	/*
+	 * TODO: This function should calculate the Pareto Frontier,
+	 * based on the preference profile provided by the opponent model.
+	 */
+	public List<BidDetails> CalculatePareto()
+	{
+		return null;
 	}
 
 	/**
