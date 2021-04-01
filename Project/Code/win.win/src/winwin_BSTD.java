@@ -25,6 +25,11 @@ import genius.core.misc.Range;
 public class winwin_BSTD extends OfferingStrategy {
 
 	/**
+	 * TODO: A lot of these things are still present from the original code we used
+	 * Stuff that isn't necessary should be removed and code in general maybe cleaned
+	 * up a bit. 
+	 */
+	/**
 	 * k in [0, 1]. For k = 0 the agent starts with a bid of maximum utility
 	 */
 	private double k;
@@ -79,7 +84,7 @@ public class winwin_BSTD extends OfferingStrategy {
 	}
 
 	/**
-	 * determineOpeningBid creates a list of bids within the range of 0.7 and 0.8
+	 * determineOpeningBid creates a list of bids within the range of 0.7 and 0.8 utility
 	 * and selects a random bid from this created sublist, which is returned and
 	 * used as opening bid. 
 	 */
@@ -99,6 +104,16 @@ public class winwin_BSTD extends OfferingStrategy {
 	 */
 	@Override
 	public BidDetails determineNextBid() {
+		/**
+		 * TODO: Create determineNextBid(). There are 2, maybe three phases, each 
+		 * in seperate function. The idea is that there need to be made some bids
+		 * until there is enough information to calculate 'pareto frontier', at
+		 * which point it makes bids 'to the right' of the pareto frontier.
+		 * Maybe at the end of a negotiation session a third phase is entered,
+		 * where bids become 'worse' more quickly for us. 
+		 * Might not be necessary, since acceptance condition also changes at that
+		 * point for us. 
+		 */
 		double time = negotiationSession.getTime();
 		double utilityGoal;
 		utilityGoal = p(time);
