@@ -112,7 +112,8 @@ public class winwin_BSTD extends OfferingStrategy {
 		 * Maybe at the end of a negotiation session a third phase is entered,
 		 * where bids become 'worse' more quickly for us. 
 		 * Might not be necessary, since acceptance condition also changes at that
-		 * point for us. 
+		 * point for us.
+		 * OKAY
 		 */
 		double time = negotiationSession.getTime();
 		double utilityGoal;
