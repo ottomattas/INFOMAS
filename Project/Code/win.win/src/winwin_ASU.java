@@ -23,11 +23,14 @@ public class winwin_ASU extends AcceptanceStrategy {
 	 * for each individual Acceptance condition, there are seperate functions
 	 * defined below. 
 	 */
+	private Bid receivedBid;
+	private Bid lastOwnBid;
+	
 	@Override
 	public Actions determineAcceptability() {
-		Bid receivedBid = negotiationSession.getOpponentBidHistory()
+		receivedBid = negotiationSession.getOpponentBidHistory()
 				.getLastBid();
-		Bid lastOwnBid = negotiationSession.getOwnBidHistory().getLastBid();
+		lastOwnBid = negotiationSession.getOwnBidHistory().getLastBid();
 		if (receivedBid == null || lastOwnBid == null) {
 			return Actions.Reject;
 		}
@@ -56,14 +59,26 @@ public class winwin_ASU extends AcceptanceStrategy {
 	}
 	
 	/*
-	 * TODO: This function should look towards the current bid that has been created
-	 * by our agent and the bid that we have just received from the opponent. If the 
-	 * utility of the opponents bid is higher than our bid, return true, otherwise, 
-	 * return false.
+	 * Acceptance_Next() compares the bid that was just received with the utility that
+	 * the agent is about to send out. If it is the case that alpha times the received
+	 * utility is higher than the utility of the bid the agent is planning to send out,
+	 * by a factor of at least beta, it will return true to the general acceptance
+	 * condition, otherwise it returns false. 
 	 */
 	public boolean Acceptance_Next()
 	{
-		return false;
+		double alpha = 1.02;
+		double beta = 0.005;
+		double receivedUtil = negotiationSession.getUtilitySpace().getUtility(receivedBid);
+		double UtilToSend = negotiationSession.getUtilitySpace().getUtility(lastOwnBid);
+		if (alpha * receivedUtil + beta >= UtilToSend)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 	/*
