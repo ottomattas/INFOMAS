@@ -26,6 +26,14 @@ public class winwin_ASU extends AcceptanceStrategy {
 	private Bid receivedBid;
 	private Bid lastOwnBid;
 	
+	private final double alpha = 1.02;
+	private final double beta = 0.005;
+	
+	// Part of the negotiation time where the agent is in the initialization phase
+	private final double time_init = 0.05;
+	// Start time where we enter the final phase of the negotiation
+	private final double time_final = 0.95;
+	
 	@Override
 	public Actions determineAcceptability() {
 		receivedBid = negotiationSession.getOpponentBidHistory()
@@ -67,8 +75,8 @@ public class winwin_ASU extends AcceptanceStrategy {
 	 */
 	public boolean Acceptance_Next()
 	{
-		double alpha = 1.02;
-		double beta = 0.005;
+		double alpha = this.alpha;
+		double beta = this.beta;
 		double receivedUtil = negotiationSession.getUtilitySpace().getUtility(receivedBid);
 		double UtilToSend = negotiationSession.getUtilitySpace().getUtility(lastOwnBid);
 		if (alpha * receivedUtil + beta >= UtilToSend)
@@ -89,9 +97,10 @@ public class winwin_ASU extends AcceptanceStrategy {
 	 * a way that it accepts any bid with a utility higher than 0.8, but should become
 	 * lower as time passes. 
 	 */
-	public boolean Acceptance_Const()
+	public boolean Acceptance_Const(double alpha)
 	{
-		return false;
+		double utility = negotiationSession.getUtilitySpace().getUtility(receivedBid);
+		return utility >= alpha;
 	}
 	
 	
@@ -99,9 +108,10 @@ public class winwin_ASU extends AcceptanceStrategy {
 	 * TODO: return true if the current time is past some point T. We should be able to 
 	 * change this T after experimentation and to find the best T possible. 
 	 */
-	public boolean Acceptance_Time()
+	public boolean Acceptance_Time(double T)
 	{
-		return false;
+		double time = negotiationSession.getTime();
+		return time >= T;
 	}
 
 	@Override
