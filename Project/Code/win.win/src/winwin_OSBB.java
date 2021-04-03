@@ -42,6 +42,7 @@ public class winwin_OSBB extends OMStrategy {
 	@Override
 	public void init(NegotiationSession negotiationSession, OpponentModel model, Map<String, Double> parameters) {
 		super.init(negotiationSession, model, parameters);
+		ParetoFrontier = null;
 		if (parameters.get("t") != null) {
 			updateThreshold = parameters.get("t").doubleValue();
 		} else {
@@ -92,10 +93,40 @@ public class winwin_OSBB extends OMStrategy {
 	/*
 	 * TODO: This function should calculate the Pareto Frontier,
 	 * based on the preference profile provided by the opponent model.
+	 * Arguments should be the opponent model created in OMHH (not sure 
+	 * how to call that), and the own utility space
 	 */
-	public List<BidDetails> CalculatePareto()
+	public void CalculatePareto(List<BidDetails> ownBids, List<BidDetails>opponentBids)
 	{
-		return null;
+		//TODO: Call dominates on every possible bid
+		
+	}
+	
+	
+	/*
+	 * This function determines if a bid Pareto dominates another bid
+	 * the arguments are the two bids, and a list of biddetails, which 
+	 * should contain the preferences of the opponent, where the first
+	 * element is the most preferred by the opponent, and the latest
+	 * element is the least preferred by the opponent.  
+	 */
+	public boolean Dominates (BidDetails bid, BidDetails bid2, List<BidDetails> opponentUtility)
+	{
+		if (bid.compareTo(bid2) != 1)
+		{
+			if (opponentUtility.indexOf(bid) <= opponentUtility.indexOf(bid2))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	/**
