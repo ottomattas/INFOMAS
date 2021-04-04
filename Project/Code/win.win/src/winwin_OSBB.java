@@ -10,6 +10,8 @@ import genius.core.boaframework.BOAparameter;
 import genius.core.boaframework.NegotiationSession;
 import genius.core.boaframework.OMStrategy;
 import genius.core.boaframework.OpponentModel;
+import genius.core.boaframework.SortedOutcomeSpace;
+import genius.core.misc.Range;
 
 /**
  * This class uses an opponent model to determine the next bid for the opponent,
@@ -25,6 +27,7 @@ public class winwin_OSBB extends OMStrategy {
 	 */
 	double updateThreshold = 1.1;
 	List<BidDetails> ParetoFrontier;
+	SortedOutcomeSpace outcomespace;
 
 	/**
 	 * Initializes the opponent model strategy. If a value for the parameter t
@@ -42,6 +45,9 @@ public class winwin_OSBB extends OMStrategy {
 	@Override
 	public void init(NegotiationSession negotiationSession, OpponentModel model, Map<String, Double> parameters) {
 		super.init(negotiationSession, model, parameters);
+		ParetoFrontier = null;
+		NegotiationSession session = negotiationSession;
+		outcomespace = new SortedOutcomeSpace(session.getUtilitySpace());
 		if (parameters.get("t") != null) {
 			updateThreshold = parameters.get("t").doubleValue();
 		} else {
@@ -90,12 +96,60 @@ public class winwin_OSBB extends OMStrategy {
 		return bestBid;
 	}
 	/*
-	 * TODO: This function should calculate the Pareto Frontier,
-	 * based on the preference profile provided by the opponent model.
+	 * The utility space is divided up into 20 different sublists,
+	 * we then iterate over this sublist to find the single bid that
+	 * dominates every other bid in the sublist. This point is added to
+	 * the ParetoFrontier.
 	 */
-	public List<BidDetails> CalculatePareto()
+	public void CalculatePareto(List<BidDetails> ownBids, List<BidDetails>opponentBids)
 	{
-		return null;
+		ParetoFrontier = null;
+		for (int i=0; i < 20; i++)
+		{
+			double lowerbound = i / 20;
+			double upperbound = (i + 1) / 20;
+			Range x = new Range(lowerbound, upperbound);
+			List<BidDetails> sublist = outcomespace.getBidsinRange(x);
+			BidDetails dominating = sublist.get(0);
+			for (int j = 0; j < sublist.size(); j++)
+			{
+				for (int k = 1; k < sublist.size(); k++)
+				{
+					if (Dominates(sublist.get(j), sublist.get(k), opponentBids))
+					{
+						dominating = sublist.get(j);
+					}
+				}
+			}
+			ParetoFrontier.add(dominating);
+		}
+	}
+	
+	
+	/*
+	 * This function determines if a bid Pareto dominates another bid
+	 * the arguments are the two bids, and a list of biddetails, which 
+	 * should contain the preferences of the opponent, where the first
+	 * element is the most preferred by the opponent, and the latest
+	 * element is the least preferred by the opponent.  
+	 */
+	public boolean Dominates (BidDetails bid, BidDetails bid2, List<BidDetails> opponentUtility)
+	{
+		if (bid.compareTo(bid2) != 1)
+		{
+			if (opponentUtility.indexOf(bid) <= opponentUtility.indexOf(bid2))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	/**
