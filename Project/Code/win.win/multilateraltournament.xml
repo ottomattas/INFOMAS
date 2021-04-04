@@ -21,6 +21,7 @@
 					classPath="agents.anac.y2015.TUDMixedStrategyAgent.TUDMixedStrategyAgent">
 					<properties />
 				</party>
+				<party classPath="file:bin/mas2021/group5/Group5_AS.class"></party>
 			</partyRepItems>
 			<partyProfileItems>
 				<item url="file:etc/templates/partydomain/party1_utility.xml" />
