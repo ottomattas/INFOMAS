@@ -57,11 +57,13 @@ public class Group5_AS extends AcceptanceStrategy {
 			}
 		} else {
 			// we have a normal utilityspace
-			double otherLastUtil = negotiationSession.getUtilitySpace()
-					.getUtility(receivedBid);
-			double myLastUtil = negotiationSession.getUtilitySpace()
-					.getUtility(lastOwnBid);
-			if (otherLastUtil >= 0.9 * myLastUtil) {
+			if (Acceptance_Const(this.alpha) && !Acceptance_Time(time_init))
+			{
+				return Actions.Accept;
+			}
+			else if ((Acceptance_Next() || (Acceptance_Time(time_final) && Acceptance_Const(this.alpha)))
+					&& Acceptance_Time(time_init))
+			{
 				return Actions.Accept;
 			}
 		}
