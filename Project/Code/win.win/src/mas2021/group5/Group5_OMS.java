@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.function.Consumer;
 
 import genius.core.bidding.BidDetails;
 import genius.core.boaframework.BOAparameter;
@@ -14,6 +15,9 @@ import genius.core.boaframework.OMStrategy;
 import genius.core.boaframework.OpponentModel;
 import genius.core.boaframework.SortedOutcomeSpace;
 import genius.core.misc.Range;
+import genius.core.analysis.ParetoFrontier;
+import genius.core.Bid;
+import genius.core.analysis.BidPoint;
 
 /**
  * This class uses an opponent model to determine the next bid for the opponent,
@@ -28,8 +32,9 @@ public class Group5_OMS extends OMStrategy {
 	 * exactly one as a match sometimes lasts slightly longer.
 	 */
 	double updateThreshold = 1.1;
-	List<BidDetails> ParetoFrontier;
+	ParetoFrontier paretoFrontier;
 	SortedOutcomeSpace outcomespace;
+	NegotiationSession session;
 
 	/**
 	 * Initializes the opponent model strategy. If a value for the parameter t
@@ -47,8 +52,8 @@ public class Group5_OMS extends OMStrategy {
 	@Override
 	public void init(NegotiationSession negotiationSession, OpponentModel model, Map<String, Double> parameters) {
 		super.init(negotiationSession, model, parameters);
-		ParetoFrontier = null;
-		NegotiationSession session = negotiationSession;
+		paretoFrontier = null;
+		session = negotiationSession;
 		outcomespace = new SortedOutcomeSpace(session.getUtilitySpace());
 		if (parameters.get("t") != null) {
 			updateThreshold = parameters.get("t").doubleValue();
@@ -98,33 +103,24 @@ public class Group5_OMS extends OMStrategy {
 		return bestBid;
 	}
 	/*
-	 * The utility space is divided up into 20 different sublists,
-	 * we then iterate over this sublist to find the single bid that
-	 * dominates every other bid in the sublist. This point is added to
-	 * the ParetoFrontier.
+		Re-generate the Pareto Frontier
 	 */
 	public void CalculatePareto(List<BidDetails> ownBids, List<BidDetails>opponentBids)
 	{
-		ParetoFrontier = null;
-		for (int i=0; i < 20; i++)
-		{
-			double lowerbound = i / 20;
-			double upperbound = (i + 1) / 20;
-			Range x = new Range(lowerbound, upperbound);
-			List<BidDetails> sublist = outcomespace.getBidsinRange(x);
-			BidDetails dominating = sublist.get(0);
-			for (int j = 0; j < sublist.size(); j++)
-			{
-				for (int k = 1; k < sublist.size(); k++)
-				{
-					if (Dominates(sublist.get(j), sublist.get(k), opponentBids))
-					{
-						dominating = sublist.get(j);
-					}
-				}
+		// Cleanup the old pareto frontier. The utilities which we estimated of the opponent when we 
+		// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
+		paretoFrontier = new ParetoFrontier();
+		opponentBids.forEach(new Consumer<BidDetails>() {
+			@Override 
+			public void accept(BidDetails bidDetail) {
+				Bid bid = bidDetail.getBid();
+				double opponentUtility = model.getBidEvaluation(bid);
+				double myUtility = session.getUtilitySpace().getUtility(bid);
+				BidPoint bidPoint = new BidPoint(bid, myUtility, opponentUtility);
+				paretoFrontier.mergeIntoFrontier(bidPoint);
 			}
-			ParetoFrontier.add(dominating);
-		}
+		});
+		// Should we also check our own bids?
 	}
 	
 	
