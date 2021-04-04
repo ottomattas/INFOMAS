@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<repository fileName="boarepository.xml">
+	<biddingstrategies>
+		<biddingstrategy description="winwin_BS" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+	</biddingstrategies>
+	<acceptanceconditions>
+		<acceptancecondition description="winwin_AS" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+	</acceptanceconditions>
+	<opponentmodels>
+		<opponentmodel description="winwin_OM" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OM.class"/>
+	</opponentmodels>
+	<omstrategies>
+		<omstrategy description="winwin_OMS" classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+	</omstrategies>
+</repository>
