@@ -32,7 +32,7 @@ public class Group5_OMS extends OMStrategy {
 	 * exactly one as a match sometimes lasts slightly longer.
 	 */
 	double updateThreshold = 1.1;
-	ParetoFrontier paretoFrontier;
+	public ParetoFrontier paretoFrontier;
 	SortedOutcomeSpace outcomespace;
 	NegotiationSession session;
 
@@ -105,12 +105,15 @@ public class Group5_OMS extends OMStrategy {
 	/*
 		Re-generate the Pareto Frontier
 	 */
-	public void CalculatePareto(List<BidDetails> ownBids, List<BidDetails>opponentBids)
+	public void CalculatePareto()
 	{
 		// Cleanup the old pareto frontier. The utilities which we estimated of the opponent when we 
 		// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
 		paretoFrontier = new ParetoFrontier();
-		opponentBids.forEach(new Consumer<BidDetails>() {
+		
+		List<BidDetails> bids = outcomespace.getOrderedList();
+		
+		bids.forEach(new Consumer<BidDetails>() {
 			@Override 
 			public void accept(BidDetails bidDetail) {
 				Bid bid = bidDetail.getBid();
@@ -120,7 +123,7 @@ public class Group5_OMS extends OMStrategy {
 				paretoFrontier.mergeIntoFrontier(bidPoint);
 			}
 		});
-		// Should we also check our own bids?
+	
 	}
 	
 	
