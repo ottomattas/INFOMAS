@@ -1,3 +1,5 @@
+package mas2021.group5;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +24,7 @@ import genius.core.misc.Range;
  * 
  * The default strategy was extended to enable the usage of opponent models.
  */
-public class winwin_BSTD extends OfferingStrategy {
+public class Group5_BS extends OfferingStrategy {
 
 	/**
 	 * TODO: A lot of these things are still present from the original code we used
@@ -199,6 +201,6 @@ public class winwin_BSTD extends OfferingStrategy {
 
 	@Override
 	public String getName() {
-		return "winwin_BS TimeDependent Offering";
+		return "Group5 win.win Bidding Strategy";
 	}
 }

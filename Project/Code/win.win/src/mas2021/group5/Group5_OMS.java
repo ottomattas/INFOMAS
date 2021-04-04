@@ -1,3 +1,5 @@
+package mas2021.group5;
+
 import java.util.List;
 
 import java.util.HashSet;
@@ -19,7 +21,7 @@ import genius.core.misc.Range;
  * used to select the best bid.
  * 
  */
-public class winwin_OSBB extends OMStrategy {
+public class Group5_OMS extends OMStrategy {
 
 	/**
 	 * when to stop updating the opponentmodel. Note that this value is not
@@ -172,6 +174,6 @@ public class winwin_OSBB extends OMStrategy {
 
 	@Override
 	public String getName() {
-		return "winwin_OS Best Bid";
+		return "Group5 win.win Opponent Model Strategy";
 	}
 }

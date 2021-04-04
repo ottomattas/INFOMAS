@@ -1,3 +1,5 @@
+package mas2021.group5;
+
 import java.util.List;
 
 import genius.core.Bid;
@@ -15,7 +17,7 @@ import genius.core.uncertainty.UserModel;
  * </ul>
  * Discount is ignored.
  */
-public class winwin_ASU extends AcceptanceStrategy {
+public class Group5_AS extends AcceptanceStrategy {
 
 	/*
 	 * TODO: this function should return Actions.Accept if and only if
@@ -116,6 +118,6 @@ public class winwin_ASU extends AcceptanceStrategy {
 
 	@Override
 	public String getName() {
-		return "winwin_AS Uncertainty";
+		return "Group5 win.win Acceptance Strategy";
 	}
 }

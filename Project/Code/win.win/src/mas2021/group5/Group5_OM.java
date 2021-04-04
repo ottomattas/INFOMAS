@@ -1,3 +1,5 @@
+package mas2021.group5;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -25,7 +27,7 @@ import genius.core.utility.EvaluatorDiscrete;
  * 
  * paper: https://ii.tudelft.nl/sites/default/files/boa.pdf
  */
-public class winwin_OMHH extends OpponentModel {
+public class Group5_OM extends OpponentModel {
 
 	/*
 	 * the learning coefficient is the weight that is added each turn to the
@@ -140,7 +142,7 @@ public class winwin_OMHH extends OpponentModel {
 
 	@Override
 	public String getName() {
-		return "winwin_OM HardHeaded Frequency Model";
+		return "Group5 win.win Opponent Model";
 	}
 
 	@Override
