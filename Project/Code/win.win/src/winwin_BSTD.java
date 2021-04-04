@@ -112,8 +112,8 @@ public class winwin_BSTD extends OfferingStrategy {
 		 * Maybe at the end of a negotiation session a third phase is entered,
 		 * where bids become 'worse' more quickly for us. 
 		 * Might not be necessary, since acceptance condition also changes at that
-		 * point for us.
-		 * OKAY
+		 * point for us. This method should call both openingphase() and laterphase()
+		 * accordingly, (depending on the time passed)
 		 */
 		double time = negotiationSession.getTime();
 		double utilityGoal;
@@ -130,6 +130,25 @@ public class winwin_BSTD extends OfferingStrategy {
 			nextBid = omStrategy.getBid(outcomespace, utilityGoal);
 		}
 		return nextBid;
+	}
+	
+	/*
+	 *TODO:  Returns random bids biding their time. Maybe it slowly walks up the 
+	 *list of bids until our preference(best bid) is reached. 
+	 */
+	public BidDetails openingphase()
+	{
+		return null;
+	}
+	
+	/*
+	 * TODO: This function should be able to calculate a pareto frontier
+	 * and make bids accordingly. It should utilize the variable ParetoFrontier
+	 * from the winwin_OSBB.java file. 
+	 */
+	public BidDetails laterphase()
+	{
+		return null;
 	}
 
 	/**
