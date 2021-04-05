@@ -159,6 +159,7 @@ public class Group5_OMS extends OMStrategy {
 	 * @return Pareto-optimal frontier.
 	 */
 	public List<BidPoint> getPareto() {
+		CalculatePareto();
 		return paretoFrontier.getFrontier();
 	}
 	

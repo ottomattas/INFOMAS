@@ -30,7 +30,7 @@ public class Group5_BS extends OfferingStrategy {
 	/** Phase switch time */
 	private double switchTime = .2;
 	/** Minimal acceptable Utility */
-	private double MinUtil;
+	private double MinUtil = .5;
 	
 
 	/**
@@ -77,6 +77,7 @@ public class Group5_BS extends OfferingStrategy {
 	@Override
 	public BidDetails determineNextBid() {
 		double time = negotiationSession.getTime();
+		BidDetails nextBid;
 		
 		if (time <= switchTime) {
 			nextBid = openingphase(time);
@@ -116,8 +117,8 @@ public class Group5_BS extends OfferingStrategy {
 	 */
 	public BidDetails laterphase(double time)
 	{
-		List<BidPoint> Pareto = omS.getPareto();
-		double utility = 1-MinUtil*((time-switchTime)/(1-switchTime));
+		List<BidPoint> Pareto = ((Group5_OMS) this.omStrategy).getPareto(); //List<BidPoint> Pareto = omS.getPareto();
+		double utility = 1-(1-MinUtil)*((time-switchTime)/(1-switchTime));
 		int index = searchIndexWith(utility, Pareto);
 		int newIndex = -1;
 		double closestDistance = Math.abs(Pareto.get(index).getUtilityA() - utility);
