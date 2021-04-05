@@ -29,6 +29,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	private Bid lastOwnBid;
 	
 	private final double alpha = 1.02;
+	private final double alpha_init = 0.675;
 	private final double beta = 0.005;
 	
 	// Part of the negotiation time where the agent is in the initialization phase
@@ -57,11 +58,13 @@ public class Group5_AS extends AcceptanceStrategy {
 			}
 		} else {
 			// we have a normal utilityspace
-			double otherLastUtil = negotiationSession.getUtilitySpace()
-					.getUtility(receivedBid);
-			double myLastUtil = negotiationSession.getUtilitySpace()
-					.getUtility(lastOwnBid);
-			if (otherLastUtil >= 0.9 * myLastUtil) {
+			if (Acceptance_Const(alpha_init) && !Acceptance_Time(time_init))
+			{
+				return Actions.Accept;
+			}
+			else if ((Acceptance_Next() || (Acceptance_Time(time_final) && Acceptance_Const(alpha)))
+					&& Acceptance_Time(time_init))
+			{
 				return Actions.Accept;
 			}
 		}
