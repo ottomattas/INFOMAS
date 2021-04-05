@@ -43,6 +43,12 @@ public class Group5_BS extends OfferingStrategy {
 	private double e;
 	/** Outcome space */
 	private SortedOutcomeSpace outcomespace;
+	/** Opponent model strategy */
+	private Group5_OMS omS;
+	/** Phase switch time */
+	private double ts;
+	/** Minimal acceptable Utility */
+	private double MinUtil;
 
 	/**
 	 * Method which initializes the agent by setting all parameters. The
@@ -80,6 +86,8 @@ public class Group5_BS extends OfferingStrategy {
 			this.opponentModel = model;
 			
 			this.omStrategy = oms;
+			
+			this.ts = .2;
 		} else {
 			throw new Exception("Constant \"e\" for the concession speed was not set.");
 		}
@@ -106,7 +114,7 @@ public class Group5_BS extends OfferingStrategy {
 	 */
 	@Override
 	public BidDetails determineNextBid() {
-		/**
+		/*
 		 * TODO: Create determineNextBid(). There are 2, maybe three phases, each 
 		 * in seperate function. The idea is that there need to be made some bids
 		 * until there is enough information to calculate 'pareto frontier', at
@@ -118,39 +126,65 @@ public class Group5_BS extends OfferingStrategy {
 		 * accordingly, (depending on the time passed)
 		 */
 		double time = negotiationSession.getTime();
-		double utilityGoal;
-		utilityGoal = p(time);
-
-		// System.out.println("[e=" + e + ", Pmin = " +
-		// BilateralAgent.round2(Pmin) + "] t = " + BilateralAgent.round2(time)
-		// + ". Aiming for " + utilityGoal);
-
-		// if there is no opponent model available
-		if (opponentModel instanceof NoModel) {
-			nextBid = negotiationSession.getOutcomeSpace().getBidNearUtility(utilityGoal);
+		
+		if (time >= ts) {
+			nextBid = openingphase(time);
 		} else {
-			nextBid = omStrategy.getBid(outcomespace, utilityGoal);
+			nextBid = laterphase(time);
 		}
+		
 		return nextBid;
 	}
 	
-	/*
-	 *TODO:  Returns random bids biding their time. Maybe it slowly walks up the 
-	 *list of bids until our preference(best bid) is reached. 
+	/**
+	 * Returns random bids biding time. Moving slowly up in list of bids 
+	 * still giving random bids until ts is reached.
+	 * 
+	 * @param time
+	 * @return BidDetails
 	 */
-	public BidDetails openingphase()
+	public BidDetails openingphase(double time)
 	{
-		return null;
+		
+		Range r = new Range(0.7+(ts*time),0.8+(ts*time));
+		List<BidDetails> t = outcomespace.getBidsinRange(r);
+		Random Rand = new Random();
+		return t.get(Rand.nextInt(t.size()));
+		
 	}
 	
-	/*
-	 * TODO: This function should be able to calculate a pareto frontier
-	 * and make bids accordingly. It should utilize the variable ParetoFrontier
-	 * from the winwin_OSBB.java file. 
+	/**
+	 * Gets the estimated pareto frontier from the Group5_OMS.java file
+	 * and make bids accordingly. Parts of the getIndexOfBidNearUtility algorithm
+	 * used by SortedOutcomeSpace is also used to set the right bid.
+	 * 
+	 * @param time
+	 * @return BidDetails
 	 */
-	public BidDetails laterphase()
+	public BidDetails laterphase(double time)
 	{
-		return null;
+		List<BidDetails> Pareto = omS.getPareto();
+		double utility = 1-MinUtil*((time-ts)/(1-ts));
+		int index = searchIndexWith(utility, Pareto);
+		int newIndex = -1;
+		double closestDistance = Math.abs(Pareto.get(index).getMyUndiscountedUtil() - utility);
+
+		// checks if the BidDetails above the selected is closer to the targetUtility
+		if (index > 0 && Math.abs(Pareto.get(index - 1).getMyUndiscountedUtil() - utility) < closestDistance) {
+			newIndex = index - 1;
+			closestDistance = Math.abs(Pareto.get(index - 1).getMyUndiscountedUtil() - utility);
+		}
+		
+		// checks if the BidDetails below the selected is closer to the targetUtility
+		if (index + 1 < Pareto.size()
+				&& Math.abs(Pareto.get(index + 1).getMyUndiscountedUtil() - utility) < closestDistance) {
+			newIndex = index + 1;
+			closestDistance = Math.abs(Pareto.get(index + 1).getMyUndiscountedUtil() - utility);
+		} else
+			newIndex = index;
+		
+		return Pareto.get(newIndex);
+		
 	}
 
 	/**
@@ -186,6 +220,38 @@ public class Group5_BS extends OfferingStrategy {
 
 	public NegotiationSession getNegotiationSession() {
 		return negotiationSession;
+	}
+	
+	/**
+	 * Binary search of a BidDetails with a particular value if there is no
+	 * BidDetails with the exact value gives the last index because this is the
+	 * closest BidDetails to the value
+	 * 
+	 * @param value
+	 * @return index
+	 * 
+	 * Source: SortedOutcomeSpace.class
+	 */
+	public int searchIndexWith(double value, List<BidDetails> listBids) {
+		
+		int middle = -1;
+		int low = 0;
+		int high = listBids.size() - 1;
+		int lastMiddle = 0;
+		while (lastMiddle != middle) {
+			lastMiddle = middle;
+			middle = (low + high) / 2;
+			if (listBids.get(middle).getMyUndiscountedUtil() == value) {
+				return middle;
+			}
+			if (listBids.get(middle).getMyUndiscountedUtil() < value) {
+				high = middle;
+			}
+			if (listBids.get(middle).getMyUndiscountedUtil() > value) {
+				low = middle;
+			}
+		}
+		return middle;
 	}
 
 	@Override
