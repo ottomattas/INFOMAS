@@ -4,8 +4,9 @@ package mas2021.group5;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.function.Consumer;
 
-import genius.core.analysis.*;
+import genius.core.Bid;
 import genius.core.bidding.BidDetails;
 import genius.core.boaframework.NegotiationSession;
 import genius.core.boaframework.OMStrategy;
@@ -13,6 +14,8 @@ import genius.core.boaframework.OfferingStrategy;
 import genius.core.boaframework.OpponentModel;
 import genius.core.boaframework.SortedOutcomeSpace;
 import genius.core.misc.Range;
+import genius.core.analysis.ParetoFrontier;
+import genius.core.analysis.BidPoint;
 
 /**
  * This is an abstract class used to implement the bidding strategy for Group 5
@@ -25,20 +28,28 @@ public class Group5_BS extends OfferingStrategy {
 
 	/** Outcome space */
 	private SortedOutcomeSpace outcomespace;
-	/** Opponent model strategy */
-	private Group5_OMS omS;
 	/** Phase switch time */
 	private double switchTime = .2;
 	/** Minimal acceptable Utility */
 	private double MinUtil = .5;
+	/** Opponent Model */
+	public OpponentModel model;
+	/** ParetoFrontier */
+	public ParetoFrontier paretoFrontier;
+	/** The negotiation session */
+	NegotiationSession session;
+	/** Preferred bid by the opponent */
+	Bid OpponentPreferredBid;
+	/** Utility of the Preferred bid by the opponent */
+	double OpponentPreferredUtil = 0.0;
 	
-
+	
 	/**
 	 * Method which initializes the agent by setting all parameters. The
 	 * parameter "e" is the only parameter which is required.
 	 */
 	@Override
-	public void init(NegotiationSession negoSession, OpponentModel model, OMStrategy oms,
+	public void init(NegotiationSession negoSession, OpponentModel Omodel, OMStrategy oms,
 			Map<String, Double> parameters) throws Exception {
 		super.init(negoSession, parameters);
 		this.negotiationSession = negoSession;
@@ -46,10 +57,12 @@ public class Group5_BS extends OfferingStrategy {
 		outcomespace = new SortedOutcomeSpace(negotiationSession.getUtilitySpace());
 		negotiationSession.setOutcomeSpace(outcomespace);
 
-		this.opponentModel = model;
+		this.model = Omodel;
 		
-		this.omStrategy = oms;
-		
+		paretoFrontier = null;
+		session = negotiationSession;
+		outcomespace = new SortedOutcomeSpace(session.getUtilitySpace());
+		OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
 	}
 
 	/**
@@ -66,9 +79,9 @@ public class Group5_BS extends OfferingStrategy {
 	}
 
 	/**
-	 * Offering strategy based on Pareto forntiers and initial confusion of the opponent.
-	 * Up until ts is reached, openingphase() will be triggered. This function returns random bids
-	 * with rising utility for this agent. After ts is reached, the function laterphase() is
+	 * Offering strategy based on Pareto frontiers and initial confusion of the opponent.
+	 * Up until switchTime is reached, openingphase() will be triggered. This function returns random bids
+	 * with rising utility for this agent. After switchTime is reached, the function laterphase() is
 	 * triggered, which slowly walks down in utility along the estimated Pareto Frontier until
 	 * the end of the negotiation. This may be acceptance of the bid or the end of the session.
 	 * 
@@ -117,7 +130,8 @@ public class Group5_BS extends OfferingStrategy {
 	 */
 	public BidDetails laterphase(double time)
 	{
-		List<BidPoint> Pareto = ((Group5_OMS) this.omStrategy).getPareto(); //List<BidPoint> Pareto = omS.getPareto();
+		CalculatePareto();
+		List<BidPoint> Pareto = paretoFrontier.getFrontier();
 		double utility = 1-(1-MinUtil)*((time-switchTime)/(1-switchTime));
 		int index = searchIndexWith(utility, Pareto);
 		int newIndex = -1;
@@ -181,7 +195,61 @@ public class Group5_BS extends OfferingStrategy {
 		}
 		return middle;
 	}
-
+	
+	/**
+	 * Re-generate the Pareto Frontier
+	 */
+	public void CalculatePareto()
+	{
+		// Only recalculate the pareto frontier when there is a significant change in preferred bid
+		
+		if (!(OpponentPreferredUtil == model.getBidEvaluation(OpponentPreferredBid))) {
+		// Cleanup the old pareto frontier. The utilities which we estimated of the opponent when we 
+		// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
+		paretoFrontier = new ParetoFrontier();
+		
+		List<BidDetails> bids = outcomespace.getOrderedList();
+		
+		bids.forEach(new Consumer<BidDetails>() {
+			@Override 
+			public void accept(BidDetails bidDetail) {
+				Bid bid = bidDetail.getBid();
+				double opponentUtility = model.getBidEvaluation(bid);
+				double myUtility = session.getUtilitySpace().getUtility(bid);
+				BidPoint bidPoint = new BidPoint(bid, myUtility, opponentUtility);
+				paretoFrontier.mergeIntoFrontier(bidPoint);
+			}
+		});
+		};
+	}
+	
+	
+	/**
+	 * This function determines if a bid Pareto dominates another bid
+	 * the arguments are the two bids, and a list of biddetails, which 
+	 * should contain the preferences of the opponent, where the first
+	 * element is the most preferred by the opponent, and the latest
+	 * element is the least preferred by the opponent.  
+	 */
+	public boolean Dominates (BidDetails bid, BidDetails bid2, List<BidDetails> opponentUtility)
+	{
+		if (bid.compareTo(bid2) != 1)
+		{
+			if (opponentUtility.indexOf(bid) <= opponentUtility.indexOf(bid2))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
 	@Override
 	public String getName() {
 		return "Group5 win.win Bidding Strategy";
