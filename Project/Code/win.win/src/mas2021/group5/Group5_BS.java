@@ -1,15 +1,13 @@
 package mas2021.group5;
 
-import java.util.HashSet;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
 
+import genius.core.analysis.*;
 import genius.core.bidding.BidDetails;
-import genius.core.boaframework.BOAparameter;
 import genius.core.boaframework.NegotiationSession;
-import genius.core.boaframework.NoModel;
 import genius.core.boaframework.OMStrategy;
 import genius.core.boaframework.OfferingStrategy;
 import genius.core.boaframework.OpponentModel;
@@ -17,32 +15,23 @@ import genius.core.boaframework.SortedOutcomeSpace;
 import genius.core.misc.Range;
 
 /**
- * This is an abstract class used to implement a TimeDependentAgent Strategy
- * adapted from [1] [1] S. Shaheen Fatima Michael Wooldridge Nicholas R.
- * Jennings Optimal Negotiation Strategies for Agents with Incomplete
- * Information http://eprints.ecs.soton.ac.uk/6151/1/atal01.pdf
+ * This is an abstract class used to implement the bidding strategy for Group 5
+ * win.win bidding strategy. This strategy requires the use of the Group5_OMS.java
+ * Opponent model strategy, due to implementation of a Pareto Frontier.
  * 
- * The default strategy was extended to enable the usage of opponent models.
+ * The default strategy was extended to enable the usage of the opponent model strategy.
  */
 public class Group5_BS extends OfferingStrategy {
 
-	/**
-	 * TODO: A lot of these things are still present from the original code we used
-	 * Stuff that isn't necessary should be removed and code in general maybe cleaned
-	 * up a bit. 
-	 */
-	/**
-	 * k in [0, 1]. For k = 0 the agent starts with a bid of maximum utility
-	 */
-	private double k;
-	/** Maximum target utility */
-	private double Pmax;
-	/** Minimum target utility */
-	private double Pmin;
-	/** Concession factor */
-	private double e;
 	/** Outcome space */
 	private SortedOutcomeSpace outcomespace;
+	/** Opponent model strategy */
+	private Group5_OMS omS;
+	/** Phase switch time */
+	private double switchTime = .2;
+	/** Minimal acceptable Utility */
+	private double MinUtil = .5;
+	
 
 	/**
 	 * Method which initializes the agent by setting all parameters. The
@@ -52,37 +41,15 @@ public class Group5_BS extends OfferingStrategy {
 	public void init(NegotiationSession negoSession, OpponentModel model, OMStrategy oms,
 			Map<String, Double> parameters) throws Exception {
 		super.init(negoSession, parameters);
-		if (parameters.get("e") != null) {
-			this.negotiationSession = negoSession;
+		this.negotiationSession = negoSession;
 
-			outcomespace = new SortedOutcomeSpace(negotiationSession.getUtilitySpace());
-			negotiationSession.setOutcomeSpace(outcomespace);
+		outcomespace = new SortedOutcomeSpace(negotiationSession.getUtilitySpace());
+		negotiationSession.setOutcomeSpace(outcomespace);
 
-			this.e = parameters.get("e");
-
-			if (parameters.get("k") != null)
-				this.k = parameters.get("k");
-			else
-				this.k = 0;
-
-			if (parameters.get("min") != null)
-				this.Pmin = parameters.get("min");
-			else
-				this.Pmin = negoSession.getMinBidinDomain().getMyUndiscountedUtil();
-
-			if (parameters.get("max") != null) {
-				Pmax = parameters.get("max");
-			} else {
-				BidDetails maxBid = negoSession.getMaxBidinDomain();
-				Pmax = maxBid.getMyUndiscountedUtil();
-			}
-
-			this.opponentModel = model;
-			
-			this.omStrategy = oms;
-		} else {
-			throw new Exception("Constant \"e\" for the concession speed was not set.");
-		}
+		this.opponentModel = model;
+		
+		this.omStrategy = oms;
+		
 	}
 
 	/**
@@ -99,104 +66,120 @@ public class Group5_BS extends OfferingStrategy {
 	}
 
 	/**
-	 * Simple offering strategy which retrieves the target utility and looks for
-	 * the nearest bid if no opponent model is specified. If an opponent model
-	 * is specified, then the agent return a bid according to the opponent model
-	 * strategy.
+	 * Offering strategy based on Pareto forntiers and initial confusion of the opponent.
+	 * Up until ts is reached, openingphase() will be triggered. This function returns random bids
+	 * with rising utility for this agent. After ts is reached, the function laterphase() is
+	 * triggered, which slowly walks down in utility along the estimated Pareto Frontier until
+	 * the end of the negotiation. This may be acceptance of the bid or the end of the session.
+	 * 
+	 * @return BidDetails
 	 */
 	@Override
 	public BidDetails determineNextBid() {
-		/**
-		 * TODO: Create determineNextBid(). There are 2, maybe three phases, each 
-		 * in seperate function. The idea is that there need to be made some bids
-		 * until there is enough information to calculate 'pareto frontier', at
-		 * which point it makes bids 'to the right' of the pareto frontier.
-		 * Maybe at the end of a negotiation session a third phase is entered,
-		 * where bids become 'worse' more quickly for us. 
-		 * Might not be necessary, since acceptance condition also changes at that
-		 * point for us. This method should call both openingphase() and laterphase()
-		 * accordingly, (depending on the time passed)
-		 */
 		double time = negotiationSession.getTime();
-		double utilityGoal;
-		utilityGoal = p(time);
-
-		// System.out.println("[e=" + e + ", Pmin = " +
-		// BilateralAgent.round2(Pmin) + "] t = " + BilateralAgent.round2(time)
-		// + ". Aiming for " + utilityGoal);
-
-		// if there is no opponent model available
-		if (opponentModel instanceof NoModel) {
-			nextBid = negotiationSession.getOutcomeSpace().getBidNearUtility(utilityGoal);
+		BidDetails nextBid;
+		
+		if (time <= switchTime) {
+			nextBid = openingphase(time);
 		} else {
-			nextBid = omStrategy.getBid(outcomespace, utilityGoal);
+			nextBid = laterphase(time);
 		}
+		
 		return nextBid;
 	}
 	
-	/*
-	 *TODO:  Returns random bids biding their time. Maybe it slowly walks up the 
-	 *list of bids until our preference(best bid) is reached. 
+	/**
+	 * Returns random bids biding time. Moving slowly up in list of bids 
+	 * still giving random bids until ts is reached.
+	 * 
+	 * @param time
+	 * @return BidDetails
 	 */
-	public BidDetails openingphase()
+	public BidDetails openingphase(double time)
 	{
-		return null;
+		
+		Range r = new Range(0.7+(0.2*(time/switchTime)),0.8+(0.2*(time/switchTime)));
+		List<BidDetails> t = outcomespace.getBidsinRange(r);
+		Random Rand = new Random();
+		return t.get(Rand.nextInt(t.size()));
+		
 	}
 	
-	/*
-	 * TODO: This function should be able to calculate a pareto frontier
-	 * and make bids accordingly. It should utilize the variable ParetoFrontier
-	 * from the winwin_OSBB.java file. 
+	/**
+	 * Gets the estimated Pareto frontier from the Group5_OMS.java file
+	 * and make bids accordingly. Parts of the getIndexOfBidNearUtility algorithm
+	 * used by SortedOutcomeSpace is also used to set the right bid.
+	 * 
+	 * @param time
+	 * @return BidDetails
+	 * 
+	 * Adapted from SortedOutcomeSpace.class
 	 */
-	public BidDetails laterphase()
+	public BidDetails laterphase(double time)
 	{
-		return null;
-	}
-
-	/**
-	 * From [1]:
-	 * 
-	 * A wide range of time dependent functions can be defined by varying the
-	 * way in which f(t) is computed. However, functions must ensure that 0 <=
-	 * f(t) <= 1, f(0) = k, and f(1) = 1.
-	 * 
-	 * That is, the offer will always be between the value range, at the
-	 * beginning it will give the initial constant and when the deadline is
-	 * reached, it will offer the reservation value.
-	 * 
-	 * For e = 0 (special case), it will behave as a Hardliner.
-	 */
-	public double f(double t) {
-		if (e == 0)
-			return k;
-		double ft = k + (1 - k) * Math.pow(t, 1.0 / e);
-		return ft;
-	}
-
-	/**
-	 * Makes sure the target utility with in the acceptable range according to
-	 * the domain. Goes from Pmax to Pmin!
-	 * 
-	 * @param t
-	 * @return double
-	 */
-	public double p(double t) {
-		return Pmin + (Pmax - Pmin) * (1 - f(t));
+		List<BidPoint> Pareto = ((Group5_OMS) this.omStrategy).getPareto(); //List<BidPoint> Pareto = omS.getPareto();
+		double utility = 1-(1-MinUtil)*((time-switchTime)/(1-switchTime));
+		int index = searchIndexWith(utility, Pareto);
+		int newIndex = -1;
+		double closestDistance = Math.abs(Pareto.get(index).getUtilityA() - utility);
+		
+		// Can be superfluous, if speed is needed
+		// checks if the BidDetails above the selected is closer to the targetUtility
+		if (index > 0 && Math.abs(Pareto.get(index - 1).getUtilityA() - utility) < closestDistance) {
+			newIndex = index - 1;
+			closestDistance = Math.abs(Pareto.get(index - 1).getUtilityA() - utility);
+		}
+		
+		// checks if the BidDetails below the selected is closer to the targetUtility
+		if (index + 1 < Pareto.size()
+				&& Math.abs(Pareto.get(index + 1).getUtilityA() - utility) < closestDistance) {
+			newIndex = index + 1;
+			closestDistance = Math.abs(Pareto.get(index + 1).getUtilityA() - utility);
+		} 
+		if (newIndex == -1) {
+			newIndex = index;
+		}
+		
+		BidDetails newBid = new BidDetails(Pareto.get(newIndex).getBid(),Pareto.get(newIndex).getUtilityA());
+		
+		return newBid;
+		
 	}
 
 	public NegotiationSession getNegotiationSession() {
 		return negotiationSession;
 	}
-
-	@Override
-	public Set<BOAparameter> getParameterSpec() {
-		Set<BOAparameter> set = new HashSet<BOAparameter>();
-		set.add(new BOAparameter("e", 1.0, "Concession rate"));
-		set.add(new BOAparameter("k", 0.0, "Offset"));
-		set.add(new BOAparameter("min", 0.0, "Minimum utility"));
-		set.add(new BOAparameter("max", 0.99, "Maximum utility"));
-
-		return set;
+	
+	/**
+	 * Binary search of a BidDetails with a particular value if there is no
+	 * BidDetails with the exact value gives the last index because this is the
+	 * closest BidDetails to the value
+	 * 
+	 * @param value
+	 * @return index
+	 * 
+	 * Source: SortedOutcomeSpace.class
+	 */
+	public int searchIndexWith(double value, List<BidPoint> listBids) {
+		
+		int middle = -1;
+		int low = 0;
+		int high = listBids.size() - 1;
+		int lastMiddle = 0;
+		while (lastMiddle != middle) {
+			lastMiddle = middle;
+			middle = (low + high) / 2;
+			if (listBids.get(middle).getUtilityA() == value) {
+				return middle;
+			}
+			if (listBids.get(middle).getUtilityA() < value) {
+				high = middle;
+			}
+			if (listBids.get(middle).getUtilityA() > value) {
+				low = middle;
+			}
+		}
+		return middle;
 	}
 
 	@Override

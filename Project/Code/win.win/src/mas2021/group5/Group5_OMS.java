@@ -152,7 +152,17 @@ public class Group5_OMS extends OMStrategy {
 			return false;
 		}
 	}
-
+	
+	/**
+	 * Returns the Pareto-optimal frontier.
+	 * 
+	 * @return Pareto-optimal frontier.
+	 */
+	public List<BidPoint> getPareto() {
+		CalculatePareto();
+		return paretoFrontier.getFrontier();
+	}
+	
 	/**
 	 * The opponent model may be updated, unless the time is higher than a given
 	 * constant.
