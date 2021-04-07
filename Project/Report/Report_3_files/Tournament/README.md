@@ -25,13 +25,13 @@ small amount of issues, large amount of values
 
 #### 1 - Time (60)
 - [x] Certainty vs Certainty
-- [ ] Uncertainty vs Uncertainty
+- [x] Uncertainty vs Uncertainty
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
 
 #### 2 - Rounds (60)
 - [x] Certainty vs Certainty
-- [ ] Uncertainty vs Uncertainty
+- [x] Uncertainty vs Uncertainty
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
 
