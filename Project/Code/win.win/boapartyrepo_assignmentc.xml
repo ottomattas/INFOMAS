@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<boaPartiesList>
+    <boaparties partyName="Group5_win.win">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="l" value="0.2"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OM.class"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="AgentLG">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.AgentLGModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Perfect">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.PerfectModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="IAMhaggler Bayesian Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="u" value="0.0"/>
+            <parameters name="b" value="1.0"/>
+            <item classpath="negotiator.boaframework.opponentmodel.IAMhagglerBayesianModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Default">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.InoxAgent_OM"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Default2">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.FSEGABayesianModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="IAMhaggler Bayesian Model2">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.PerfectIAMhagglerBayesianModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Opposite Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.OppositeModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Scalable Bayesian Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.ScalableBayesianModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="No Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="genius.core.boaframework.NoModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Uniform Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.UniformModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Default Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.DefaultModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="NASH Frequency Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.NashFrequencyModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Worst Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.WorstModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="IAMhaggler Bayesian Model3">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="u" value="0.0"/>
+            <parameters name="b" value="1.0"/>
+            <item classpath="negotiator.boaframework.opponentmodel.IAMhagglerBayesianModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Bayesian Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="m" value="0.0"/>
+            <item classpath="negotiator.boaframework.opponentmodel.BayesianModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="AgentX Frequency Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.AgentXFrequencyModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Default3">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.TheFawkes_OM"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Smith Frequency Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.SmithFrequencyModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Smith Frequency Model v2">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.SmithFrequencyModelV2"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="Scalable Bayesian Model2">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.PerfectScalableBayesianModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="CUHK Frequency Model V2">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.CUHKFrequencyModelV2"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="HardHeaded Frequency Model">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="l" value="0.2"/>
+            <item classpath="negotiator.boaframework.opponentmodel.HardHeadedFrequencyModel"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+</boaPartiesList>

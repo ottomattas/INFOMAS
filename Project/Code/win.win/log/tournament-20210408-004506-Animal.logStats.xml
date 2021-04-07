@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<agentsStatistics>
+    <statistics>
+        <totalUndiscountedUtility>0.7141412057544949</totalUndiscountedUtility>
+        <totalDiscountedUtility>0.7074369513541174</totalDiscountedUtility>
+        <numberOfSessions>1</numberOfSessions>
+        <totalNashDist>0.40047019876530743</totalNashDist>
+        <totalWelfare>1.4148739027082349</totalWelfare>
+        <totalParetoDistance>0.40047019876530743</totalParetoDistance>
+        <meanDiscounted>0.7074369513541174</meanDiscounted>
+        <meanNashDistance>0.40047019876530743</meanNashDistance>
+        <meanParetoDistance>0.40047019876530743</meanParetoDistance>
+        <meanUndiscounted>0.7141412057544949</meanUndiscounted>
+        <meanWelfare>1.4148739027082349</meanWelfare>
+    </statistics>
+</agentsStatistics>
