@@ -30,6 +30,8 @@ public class Group5_BS extends OfferingStrategy {
 	private SortedOutcomeSpace outcomespace;
 	/** Phase switch time */
 	private double switchTime = .2;
+	/** Phase switch time */
+	private double switchTime2 = .8;
 	/** Minimal acceptable Utility */
 	private double MinUtil = .5;
 	/** Opponent Model */
@@ -42,6 +44,8 @@ public class Group5_BS extends OfferingStrategy {
 	Bid OpponentPreferredBid;
 	/** Utility of the Preferred bid by the opponent */
 	double OpponentPreferredUtil = 0.0;
+	/** Utility at the end of the middle phase */
+	double middlePhaseUtil = 0.0;
 	
 	
 	/**
@@ -94,6 +98,8 @@ public class Group5_BS extends OfferingStrategy {
 		
 		if (time <= switchTime) {
 			nextBid = openingphase(time);
+		} else if (time <= switchTime2) {
+			nextBid = openingphase(time);
 		} else {
 			nextBid = laterphase(time);
 		}
@@ -132,7 +138,18 @@ public class Group5_BS extends OfferingStrategy {
 	{
 		CalculatePareto();
 		List<BidPoint> Pareto = paretoFrontier.getFrontier();
-		double utility = 1-(1-MinUtil)*((time-switchTime)/(1-switchTime));
+		double utility;
+		if (time < switchTime2) {
+			BidDetails oppBid = negotiationSession.getOpponentBidHistory().getHistory().get(negotiationSession.getOpponentBidHistory().size() - 1);
+			BidDetails prevOppBid = negotiationSession.getOpponentBidHistory().getHistory().get(negotiationSession.getOpponentBidHistory().size() - 2);
+			utility = middlePhaseUtil - oppBid.getMyUndiscountedUtil() + prevOppBid.getMyUndiscountedUtil();
+			middlePhaseUtil = utility;
+			if (oppBid.getMyUndiscountedUtil() > MinUtil) {
+				MinUtil = oppBid.getMyUndiscountedUtil();
+			}
+		} else {
+			utility = (1-(1-(MinUtil/middlePhaseUtil))*((time-switchTime2)/(1-switchTime2)))*middlePhaseUtil;
+		}
 		int index = searchIndexWith(utility, Pareto);
 		int newIndex = -1;
 		double closestDistance = Math.abs(Pareto.get(index).getUtilityA() - utility);
@@ -229,33 +246,6 @@ public class Group5_BS extends OfferingStrategy {
 			}
 		});
 		};
-	}
-	
-	
-	/**
-	 * This function determines if a bid Pareto dominates another bid
-	 * the arguments are the two bids, and a list of biddetails, which 
-	 * should contain the preferences of the opponent, where the first
-	 * element is the most preferred by the opponent, and the latest
-	 * element is the least preferred by the opponent.  
-	 */
-	public boolean Dominates (BidDetails bid, BidDetails bid2, List<BidDetails> opponentUtility)
-	{
-		if (bid.compareTo(bid2) != 1)
-		{
-			if (opponentUtility.indexOf(bid) <= opponentUtility.indexOf(bid2))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
 	}
 	
 	@Override
