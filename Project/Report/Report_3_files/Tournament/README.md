@@ -2,6 +2,22 @@
 Agent 1 = opponent
 Agent 2 = win.win
 
+Excluded agents
+- UIAgent
+- UIAgentExtended
+- CounterOfferHumanNegotiationParty
+- Exp_Rubick
+- GroupY
+- Libra
+- Sontag
+- CaduceusDC16
+- ShahAgent
+- Mamenchis
+- AgentKN
+- Rubick
+- ArisawaYaki
+- Aster
+- Atlas
 
 ## Assignment E
 ### 1 - FiftyFifty2013_domain
