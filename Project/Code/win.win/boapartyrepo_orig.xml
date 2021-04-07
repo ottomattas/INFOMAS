@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<boaPartiesList>
+    <boaparties partyName="Group5_win.win">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="l" value="0.2"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OM.class"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class"/>
+        </omStrategy>
+    </boaparties>
+</boaPartiesList>
