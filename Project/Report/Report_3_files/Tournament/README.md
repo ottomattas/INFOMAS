@@ -31,7 +31,7 @@ small amount of issues, large amount of values
 
 #### 2 - Rounds (60)
 - [x] Certainty vs Certainty
-- [ ] Uncertainty vs Uncertainty
+- [x] Uncertainty vs Uncertainty
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
 
