@@ -17,6 +17,8 @@ small amount of issues, large amount of values
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
 
+-----
+
 ### 2 - Domain8
 large amount of issues, small amount of values
 
@@ -31,6 +33,8 @@ large amount of issues, small amount of values
 - [ ] Uncertainty vs Uncertainty
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
+
+-----
 
 ### 3 - Ultimatum
 small amount of issues, small amount of values
@@ -47,6 +51,8 @@ small amount of issues, small amount of values
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
 
+-----
+
 ### 4 - Animal
 medium domain
 
@@ -61,6 +67,8 @@ medium domain
 - [ ] Uncertainty vs Uncertainty
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
+
+-----
 
 ### 5 - Travel-A-domain
 large domain
