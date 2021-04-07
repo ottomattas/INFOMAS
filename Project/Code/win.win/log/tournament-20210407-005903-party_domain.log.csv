@@ -1,0 +1,6 @@
+sep=;
+Run time (s);Round;Exception;deadline;Agreement;Discounted;#agreeing;min.util.;max.util.;Dist. to Pareto;Dist. to Nash;Social Welfare;Agent 1;Agent 2;Utility 1;Utility 2;Disc. Util. 1;Disc. Util. 2;Perceived. Util. 1;Perceived. Util. 2;User Bother 1;User Bother 2;User Util. 1;User Util. 2;Profile 1;Profile 2
+0.041;58;;60rounds;Yes;No;2;0.65833;1.00000;0.00000;0.14542;1.65833;FunctionalAcceptor@368;FunctionalAcceptor@369;0.6583333333333333;1.0;0.6583333333333333;1.0;0.0;0.0;0.0;0.0;0.6583333333333333;1.0;party1_utility.xml;party2_utility.xml
+0.082;61;;60rounds;No;No;1;0.00000;0.00000;1.03604;1.21592;0.00000;OptimalBidderSimple@370;FunctionalAcceptor@371;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;party1_utility.xml;party2_utility.xml
+0.095;61;;60rounds;No;No;1;0.00000;0.00000;1.03604;1.21592;0.00000;FunctionalAcceptor@372;OptimalBidderSimple@373;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;party1_utility.xml;party2_utility.xml
+0.068;61;;60rounds;No;No;1;0.00000;0.00000;1.03604;1.21592;0.00000;OptimalBidderSimple@374;OptimalBidderSimple@375;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;0.0;party1_utility.xml;party2_utility.xml

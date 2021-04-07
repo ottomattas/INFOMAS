@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<agentsStatistics>
+    <statistics>
+        <agentname>agents.FunctionalAcceptor</agentname>
+        <totalUndiscountedUtility>1.6583333333333332</totalUndiscountedUtility>
+        <totalDiscountedUtility>1.6583333333333332</totalDiscountedUtility>
+        <numberOfSessions>4</numberOfSessions>
+        <totalNashDist>2.722680327633178</totalNashDist>
+        <totalWelfare>3.3166666666666664</totalWelfare>
+        <totalParetoDistance>2.072078714672903</totalParetoDistance>
+        <meanDiscounted>0.4145833333333333</meanDiscounted>
+        <meanNashDistance>0.6806700819082945</meanNashDistance>
+        <meanParetoDistance>0.5180196786682257</meanParetoDistance>
+        <meanUndiscounted>0.4145833333333333</meanUndiscounted>
+        <meanWelfare>0.8291666666666666</meanWelfare>
+    </statistics>
+    <statistics>
+        <agentname>agents.OptimalBidderSimple</agentname>
+        <totalUndiscountedUtility>0.0</totalUndiscountedUtility>
+        <totalDiscountedUtility>0.0</totalDiscountedUtility>
+        <numberOfSessions>4</numberOfSessions>
+        <totalNashDist>4.863675707156261</totalNashDist>
+        <totalWelfare>0.0</totalWelfare>
+        <totalParetoDistance>4.144157429345806</totalParetoDistance>
+        <meanDiscounted>0.0</meanDiscounted>
+        <meanNashDistance>1.2159189267890653</meanNashDistance>
+        <meanParetoDistance>1.0360393573364515</meanParetoDistance>
+        <meanUndiscounted>0.0</meanUndiscounted>
+        <meanWelfare>0.0</meanWelfare>
+    </statistics>
+</agentsStatistics>

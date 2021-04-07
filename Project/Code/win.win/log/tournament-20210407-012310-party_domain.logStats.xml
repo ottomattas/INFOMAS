@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<agentsStatistics>
+    <statistics>
+        <agentname>BoaPartyRepItem[Group5_win.win,BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class),[k=0.0, max=0.99, e=1.0, min=0.0]],BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class),[]],BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OM.class),[l=0.2]],BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class),[t=1.1]]]</agentname>
+        <totalUndiscountedUtility>0.0</totalUndiscountedUtility>
+        <totalDiscountedUtility>0.0</totalDiscountedUtility>
+        <numberOfSessions>2</numberOfSessions>
+        <totalNashDist>2.0</totalNashDist>
+        <totalWelfare>0.0</totalWelfare>
+        <totalParetoDistance>2.0</totalParetoDistance>
+        <meanDiscounted>0.0</meanDiscounted>
+        <meanNashDistance>1.0</meanNashDistance>
+        <meanParetoDistance>1.0</meanParetoDistance>
+        <meanUndiscounted>0.0</meanUndiscounted>
+        <meanWelfare>0.0</meanWelfare>
+    </statistics>
+</agentsStatistics>
