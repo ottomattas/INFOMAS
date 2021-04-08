@@ -100,7 +100,7 @@ small amount of issues, small amount of values
 medium domain
 
 #### 1 - Time (60)
-- [ ] Certainty vs Certainty
+- [x] Certainty vs Certainty
 - [x] Uncertainty vs Uncertainty
 - [ ] Optional: Certainty vs Uncertainty
 - [ ] Optional: Uncertainty vs Certainty
