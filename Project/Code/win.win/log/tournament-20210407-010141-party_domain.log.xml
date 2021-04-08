@@ -1,0 +1,151 @@
+<?xml version="1.0" ?><Tournament>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:41 CEST 2021" timeOfAgreement="0.47540983606557374" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="57" runtime="0.017771796" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials]" startingAgent="BoulwareNegotiationParty@410" deadline="60rounds">
+<resultsOfAgent agent="BoulwareNegotiationParty@410" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.975" finalUtility="0.975" discountedUtility="0.975" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="ConcederNegotiationParty@411" agentDesc="Time-based conceder" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.ConcederNegotiationParty" userUtility="0.49464690002105177" finalUtility="0.49464690002105177" discountedUtility="0.49464690002105177" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:42 CEST 2021" timeOfAgreement="0.14754098360655737" lastAction="(Accept  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="16" runtime="0.018966183" finalOutcome="Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="ConcederNegotiationParty@412" deadline="60rounds">
+<resultsOfAgent agent="ConcederNegotiationParty@412" agentDesc="Time-based conceder" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="negotiator.parties.ConcederNegotiationParty" userUtility="0.6583333333333333" finalUtility="0.6583333333333333" discountedUtility="0.6583333333333333" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@413" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="1.0" finalUtility="1.0" discountedUtility="1.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:42 CEST 2021" timeOfAgreement="0.06557377049180328" lastAction="(Accept  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="6" runtime="0.005305871" finalOutcome="Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="SimpleAgent@414" deadline="60rounds">
+<resultsOfAgent agent="SimpleAgent@414" agentDesc="Random bids until good offer is received" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.SimpleAgent" userUtility="0.6583333333333333" finalUtility="0.6583333333333333" discountedUtility="0.6583333333333333" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@415" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="1.0" finalUtility="1.0" discountedUtility="1.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:42 CEST 2021" timeOfAgreement="0.8688524590163934" lastAction="(Accept  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Plain, Music: Band, Cleanup: Hired Help])" domain="etc/templates/partydomain/party_domain.xml" bids="105" runtime="0.0386945" finalOutcome="Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Your Dorm, Invitations: Plain, Music: Band, Cleanup: Hired Help]" startingAgent="RandomCounterOfferNegotiationParty@416" deadline="60rounds">
+<resultsOfAgent agent="RandomCounterOfferNegotiationParty@416" agentDesc="Place random bids until 90% of time" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="negotiator.parties.RandomCounterOfferNegotiationParty" userUtility="0.47" finalUtility="0.47" discountedUtility="0.47" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@417" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.6403908928341554" finalUtility="0.6403908928341554" discountedUtility="0.6403908928341554" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:42 CEST 2021" timeOfAgreement="0.9016393442622951" lastAction="(Accept  bid:Bid[Food: Handmade Food, Drinks: Non-Alcoholic, Location: Party Tent, Invitations: Plain, Music: Band, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="108" runtime="0.05003329" finalOutcome="Bid[Food: Handmade Food, Drinks: Non-Alcoholic, Location: Party Tent, Invitations: Plain, Music: Band, Cleanup: Specialized Materials]" startingAgent="RandomParty@418" deadline="60rounds">
+<resultsOfAgent agent="RandomParty@418" agentDesc="Place random bids until 90% of time (copy)" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="negotiator.parties.RandomParty" userUtility="0.49083333333333323" finalUtility="0.49083333333333323" discountedUtility="0.49083333333333323" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@419" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.5045462592393629" finalUtility="0.5045462592393629" discountedUtility="0.5045462592393629" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:42 CEST 2021" timeOfAgreement="0.4918032786885246" lastAction="(Accept  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="59" runtime="0.026441454" finalOutcome="Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: MP3, Cleanup: Water and Soap]" startingAgent="RandomParty2@420" deadline="60rounds">
+<resultsOfAgent agent="RandomParty2@420" agentDesc="Place random bids until 90% of time (copy 2)" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="negotiator.parties.RandomParty2" userUtility="0.6458333333333333" finalUtility="0.6458333333333333" discountedUtility="0.6458333333333333" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@421" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.9835232614447449" finalUtility="0.9835232614447449" discountedUtility="0.9835232614447449" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:42 CEST 2021" timeOfAgreement="0.8032786885245902" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="97" runtime="0.099537232" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Photo, Music: MP3, Cleanup: Water and Soap]" startingAgent="Agent33@422" deadline="60rounds">
+<resultsOfAgent agent="Agent33@422" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.agent33.Agent33" userUtility="0.7974999999999999" finalUtility="0.7974999999999999" discountedUtility="0.7974999999999999" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@423" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.7473213482870438" finalUtility="0.7473213482870438" discountedUtility="0.7473213482870438" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:43 CEST 2021" timeOfAgreement="0.14754098360655737" lastAction="(Accept  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="16" runtime="0.163330169" finalOutcome="Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="AgentHerb@424" deadline="60rounds">
+<resultsOfAgent agent="AgentHerb@424" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.agentherb.AgentHerb" userUtility="0.6583333333333333" finalUtility="0.6583333333333333" discountedUtility="0.6583333333333333" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@425" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="1.0" finalUtility="1.0" discountedUtility="1.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:44 CEST 2021" timeOfAgreement="0.6229508196721312" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="75" runtime="1.407637173" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="AgentNP1@426" deadline="60rounds">
+<resultsOfAgent agent="AgentNP1@426" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.agentnp1.AgentNP1" userUtility="0.7849999999999999" finalUtility="0.7849999999999999" discountedUtility="0.7849999999999999" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@427" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.9285654723948509" finalUtility="0.9285654723948509" discountedUtility="0.9285654723948509" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:45 CEST 2021" timeOfAgreement="0.8360655737704918" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="101" runtime="0.127893142" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap]" startingAgent="AgreeableAgent2018@428" deadline="60rounds">
+<resultsOfAgent agent="AgreeableAgent2018@428" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.agreeableagent2018.AgreeableAgent2018" userUtility="0.9291666666666667" finalUtility="0.9291666666666667" discountedUtility="0.9291666666666667" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@429" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.6497308213786102" finalUtility="0.6497308213786102" discountedUtility="0.6497308213786102" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:46 CEST 2021" timeOfAgreement="0.9016393442622951" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="109" runtime="1.158849992" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Specialized Materials]" startingAgent="ATeamAgent@430" deadline="60rounds">
+<resultsOfAgent agent="ATeamAgent@430" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.ateamagent.ATeamAgent" userUtility="0.9066666666666666" finalUtility="0.9066666666666666" discountedUtility="0.9066666666666666" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@431" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.48720946600526105" finalUtility="0.48720946600526105" discountedUtility="0.48720946600526105" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:46 CEST 2021" timeOfAgreement="0.6229508196721312" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="74" runtime="0.042007916" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="Group2@432" deadline="60rounds">
+<resultsOfAgent agent="Group2@432" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.beta_one.Group2" userUtility="0.7849999999999999" finalUtility="0.7849999999999999" discountedUtility="0.7849999999999999" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@433" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.9285654723948509" finalUtility="0.9285654723948509" discountedUtility="0.9285654723948509" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:01:46 CEST 2021" timeOfAgreement="0.9180327868852459" lastAction="(Accept  bid:Bid[Food: Finger-Food, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: Band, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="110" runtime="0.057704019" finalOutcome="Bid[Food: Finger-Food, Drinks: Beer Only, Location: Ballroom, Invitations: Custom, Printed, Music: Band, Cleanup: Specialized Materials]" startingAgent="ConDAgent@434" deadline="60rounds">
+<resultsOfAgent agent="ConDAgent@434" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.condagent.ConDAgent" userUtility="0.7375" finalUtility="0.7375" discountedUtility="0.7375" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@435" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.4563795727563315" finalUtility="0.4563795727563315" discountedUtility="0.4563795727563315" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome exception="Failed to execute protocol: Negotiating party Exp_Rubick@436 timed out in chooseAction() method.: agent Exp_Rubick@436 passed deadline and was killed" currentTime="Wed Apr 07 01:02:47 CEST 2021" lastAction="null" bids="48" runtime="60.096885841" deadline="60rounds">
+<resultsOfAgent agent="Exp_Rubick" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.exp_rubick.Exp_Rubick" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:47 CEST 2021" timeOfAgreement="0.7049180327868853" lastAction="(Accept  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="84" runtime="0.075240236" finalOutcome="Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap]" startingAgent="FullAgent@462" deadline="60rounds">
+<resultsOfAgent agent="FullAgent@462" agentDesc="Agent FullAgent" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.fullagent.FullAgent" userUtility="0.7725" finalUtility="0.7725" discountedUtility="0.7725" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@463" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.863825759227598" finalUtility="0.863825759227598" discountedUtility="0.863825759227598" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome exception="failed to construct agent : Execution failed of init&lt;GroupY@464,Participant[Party464,PartyRepositoryItem[GroupY,agents.anac.y2018.groupy.GroupY,ANAC2018, is mediator=false],etc/templates/partydomain/party1_utility.xml]&gt;:java.lang.IllegalStateException: need standard persistent data: need standard persistent data" currentTime="Wed Apr 07 01:02:47 CEST 2021" lastAction="null" bids="0" runtime="0.0" deadline="60rounds">
+<resultsOfAgent agent="GroupY" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.groupy.GroupY" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:48 CEST 2021" timeOfAgreement="0.8524590163934426" lastAction="(Accept  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="102" runtime="0.900284475" finalOutcome="Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Tent, Invitations: Custom, Handmade, Music: DJ, Cleanup: Water and Soap]" startingAgent="IQSun2018@466" deadline="60rounds">
+<resultsOfAgent agent="IQSun2018@466" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.iqson.IQSun2018" userUtility="0.715" finalUtility="0.715" discountedUtility="0.715" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@467" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.6300806389200568" finalUtility="0.6300806389200568" discountedUtility="0.6300806389200568" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:48 CEST 2021" timeOfAgreement="0.4918032786885246" lastAction="(Accept  bid:Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="58" runtime="0.422905636" finalOutcome="Bid[Food: Handmade Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="Lancelot@468" deadline="60rounds">
+<resultsOfAgent agent="Lancelot@468" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.lancelot.Lancelot" userUtility="0.7216666666666667" finalUtility="0.7216666666666667" discountedUtility="0.7216666666666667" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@469" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.9761884907982836" finalUtility="0.9761884907982836" discountedUtility="0.9761884907982836" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome exception="failed to construct agent : Execution failed of init&lt;Libra@470,Participant[Party470,PartyRepositoryItem[Libra,agents.anac.y2018.libra.Libra,ANAC2018, is mediator=false],etc/templates/partydomain/party1_utility.xml]&gt;:java.lang.IllegalStateException: need standard persistent data: need standard persistent data" currentTime="Wed Apr 07 01:02:49 CEST 2021" lastAction="null" bids="0" runtime="0.0" deadline="60rounds">
+<resultsOfAgent agent="Libra" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.libra.Libra" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:49 CEST 2021" timeOfAgreement="0.9344262295081968" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="113" runtime="0.329762212" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials]" startingAgent="Agent36@472" deadline="60rounds">
+<resultsOfAgent agent="Agent36@472" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.meng_wan.Agent36" userUtility="0.975" finalUtility="0.975" discountedUtility="0.975" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@473" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.49464690002105177" finalUtility="0.49464690002105177" discountedUtility="0.49464690002105177" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:49 CEST 2021" timeOfAgreement="0.7049180327868853" lastAction="(Accept  bid:Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="84" runtime="0.026916039" finalOutcome="Bid[Food: Finger-Food, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Water and Soap]" startingAgent="PonPokoRampage@474" deadline="60rounds">
+<resultsOfAgent agent="PonPokoRampage@474" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.ponpokorampage.PonPokoRampage" userUtility="0.7725" finalUtility="0.7725" discountedUtility="0.7725" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@475" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.863825759227598" finalUtility="0.863825759227598" discountedUtility="0.863825759227598" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:49 CEST 2021" timeOfAgreement="0.9508196721311475" lastAction="(Accept  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Special Equiment])" domain="etc/templates/partydomain/party_domain.xml" bids="115" runtime="0.034900944" finalOutcome="Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Plain, Music: DJ, Cleanup: Special Equiment]" startingAgent="Seto@476" deadline="60rounds">
+<resultsOfAgent agent="Seto@476" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.seto.Seto" userUtility="0.8324999999999999" finalUtility="0.8324999999999999" discountedUtility="0.8324999999999999" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@477" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.4767758484655683" finalUtility="0.4767758484655683" discountedUtility="0.4767758484655683" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:49 CEST 2021" timeOfAgreement="0.8688524590163934" lastAction="(Accept  bid:Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="105" runtime="0.055310098" finalOutcome="Bid[Food: Handmade Food, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Water and Soap]" startingAgent="Shiboy@478" deadline="60rounds">
+<resultsOfAgent agent="Shiboy@478" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.shiboy.Shiboy" userUtility="0.8783333333333334" finalUtility="0.8783333333333334" discountedUtility="0.8783333333333334" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@479" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.713830578337298" finalUtility="0.713830578337298" discountedUtility="0.713830578337298" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 01:02:50 CEST 2021" timeOfAgreement="0.9508196721311475" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="115" runtime="0.03429478" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Printed, Music: DJ, Cleanup: Specialized Materials]" startingAgent="SMAC_Agent@480" deadline="60rounds">
+<resultsOfAgent agent="SMAC_Agent@480" agentDesc="ANAC2018" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.smac_agent.SMAC_Agent" userUtility="0.975" finalUtility="0.975" discountedUtility="0.975" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty@481" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" userUtility="0.49464690002105177" finalUtility="0.49464690002105177" discountedUtility="0.49464690002105177" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome exception="failed to construct agent : Execution failed of init&lt;Sontag@482,Participant[Party482,PartyRepositoryItem[Sontag,agents.anac.y2018.sontag.Sontag,ANAC2018, is mediator=false],etc/templates/partydomain/party1_utility.xml]&gt;:java.lang.IllegalStateException: need standard persistent data: need standard persistent data" currentTime="Wed Apr 07 01:02:50 CEST 2021" lastAction="null" bids="0" runtime="0.0" deadline="60rounds">
+<resultsOfAgent agent="Sontag" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2018.sontag.Sontag" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="BoulwareNegotiationParty" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?><Tournament>
+<NegotiationOutcome currentTime="Wed Apr 07 00:59:03 CEST 2021" timeOfAgreement="0.9344262295081968" lastAction="(Accept  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="112" runtime="0.040621738" finalOutcome="Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="FunctionalAcceptor@368" deadline="60rounds">
+<resultsOfAgent agent="FunctionalAcceptor@368" agentDesc="Agent FunctionalAcceptor" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.FunctionalAcceptor" userUtility="0.6583333333333333" finalUtility="0.6583333333333333" discountedUtility="0.6583333333333333" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="FunctionalAcceptor@369" agentDesc="Agent FunctionalAcceptor" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="agents.FunctionalAcceptor" userUtility="1.0" finalUtility="1.0" discountedUtility="1.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 00:59:03 CEST 2021" lastAction="(Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="120" runtime="0.082070347" finalOutcome="-" startingAgent="OptimalBidderSimple@370" deadline="60rounds">
+<resultsOfAgent agent="OptimalBidderSimple@370" agentDesc="using the optimal stopping rule (cutoffs) for bidding" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.OptimalBidderSimple" userUtility="0.0" finalUtility="0.0" discountedUtility="0.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="FunctionalAcceptor@371" agentDesc="Agent FunctionalAcceptor" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="agents.FunctionalAcceptor" userUtility="0.0" finalUtility="0.0" discountedUtility="0.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 00:59:03 CEST 2021" lastAction="(Offer  bid:Bid[Food: Catering])" domain="etc/templates/partydomain/party_domain.xml" bids="120" runtime="0.095194524" finalOutcome="-" startingAgent="FunctionalAcceptor@372" deadline="60rounds">
+<resultsOfAgent agent="FunctionalAcceptor@372" agentDesc="Agent FunctionalAcceptor" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.FunctionalAcceptor" userUtility="0.0" finalUtility="0.0" discountedUtility="0.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="OptimalBidderSimple@373" agentDesc="using the optimal stopping rule (cutoffs) for bidding" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="agents.OptimalBidderSimple" userUtility="0.0" finalUtility="0.0" discountedUtility="0.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome>
+<NegotiationOutcome currentTime="Wed Apr 07 00:59:03 CEST 2021" lastAction="(Offer  bid:Bid[Food: Catering])" domain="etc/templates/partydomain/party_domain.xml" bids="120" runtime="0.067801482" finalOutcome="-" startingAgent="OptimalBidderSimple@374" deadline="60rounds">
+<resultsOfAgent agent="OptimalBidderSimple@374" agentDesc="using the optimal stopping rule (cutoffs) for bidding" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.OptimalBidderSimple" userUtility="0.0" finalUtility="0.0" discountedUtility="0.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+<resultsOfAgent agent="OptimalBidderSimple@375" agentDesc="using the optimal stopping rule (cutoffs) for bidding" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="agents.OptimalBidderSimple" userUtility="0.0" finalUtility="0.0" discountedUtility="0.0" discount="1.0" totalUserBother="0.0">
+</resultsOfAgent>
+</NegotiationOutcome></Tournament>

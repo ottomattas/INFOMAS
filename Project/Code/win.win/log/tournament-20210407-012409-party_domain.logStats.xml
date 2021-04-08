@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<agentsStatistics>
+    <statistics>
+        <agentname>BoaPartyRepItem[Group5_win.win,BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_BS.class),[k=0.0, max=0.99, e=1.0, min=0.0]],BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_AS.class),[]],BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OM.class),[l=0.2]],BOA[boa(/Users/ottomattas/Documents/UU/INFOMAS/Project/Code/win.win/bin/mas2021/group5/Group5_OMS.class),[t=1.1]]]</agentname>
+        <totalUndiscountedUtility>0.0</totalUndiscountedUtility>
+        <totalDiscountedUtility>0.0</totalDiscountedUtility>
+        <numberOfSessions>4</numberOfSessions>
+        <totalNashDist>4.0</totalNashDist>
+        <totalWelfare>0.0</totalWelfare>
+        <totalParetoDistance>4.0</totalParetoDistance>
+        <meanDiscounted>0.0</meanDiscounted>
+        <meanNashDistance>1.0</meanNashDistance>
+        <meanParetoDistance>1.0</meanParetoDistance>
+        <meanUndiscounted>0.0</meanUndiscounted>
+        <meanWelfare>0.0</meanWelfare>
+    </statistics>
+    <statistics>
+        <agentname>agents.ABMPAgent2</agentname>
+        <totalUndiscountedUtility>1.6758475833592148</totalUndiscountedUtility>
+        <totalDiscountedUtility>1.6758475833592148</totalDiscountedUtility>
+        <numberOfSessions>4</numberOfSessions>
+        <totalNashDist>2.204209174728428</totalNashDist>
+        <totalWelfare>3.3516951667184296</totalWelfare>
+        <totalParetoDistance>2.0413634095992217</totalParetoDistance>
+        <meanDiscounted>0.4189618958398037</meanDiscounted>
+        <meanNashDistance>0.551052293682107</meanNashDistance>
+        <meanParetoDistance>0.5103408523998054</meanParetoDistance>
+        <meanUndiscounted>0.4189618958398037</meanUndiscounted>
+        <meanWelfare>0.8379237916796074</meanWelfare>
+    </statistics>
+</agentsStatistics>

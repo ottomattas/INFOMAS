@@ -3,28 +3,13 @@ package mas2021.group5;
 import java.util.List;
 
 import genius.core.Bid;
+import genius.core.bidding.BidDetails;
 import genius.core.boaframework.AcceptanceStrategy;
 import genius.core.boaframework.Actions;
 import genius.core.uncertainty.UserModel;
+import genius.core.utility.AbstractUtilitySpace;
 
-/**
- * Accepts:
- * <ul>
- * <li>if we have uncertainty profile, and we receive an offer in our highest
- * 10% best bids.
- * <li>if we have normal utilityspace, and we receive offer with a utility
- * better than 90% of what we offered last.
- * </ul>
- * Discount is ignored.
- */
 public class Group5_AS extends AcceptanceStrategy {
-
-	/*
-	 * TODO: this function should return Actions.Accept if and only if
-	 * AC_combined-init is true (refer to report 2 for a specific description)
-	 * for each individual Acceptance condition, there are seperate functions
-	 * defined below. 
-	 */
 	private Bid receivedBid;
 	private Bid lastOwnBid;
 	
@@ -36,6 +21,11 @@ public class Group5_AS extends AcceptanceStrategy {
 	private final double time_init = 0.05;
 	// Start time where we enter the final phase of the negotiation
 	private final double time_final = 0.95;
+	
+	// In the final phase of the acceptance strategy, calculate the average over this percentage
+	private final double windowSlidePercentage = 0.2;
+	// This is set once, to determine minimum utility in the final phase.
+	private double finalMinimumUtility = -1;
 	
 	@Override
 	public Actions determineAcceptability() {
@@ -62,13 +52,42 @@ public class Group5_AS extends AcceptanceStrategy {
 			{
 				return Actions.Accept;
 			}
-			else if ((Acceptance_Next() || (Acceptance_Time(time_final) && Acceptance_Const(alpha)))
+			else if ((Acceptance_Next() || (Acceptance_Time(time_final) && Acceptance_Const(getFinalPhaseMinUtility())))
 					&& Acceptance_Time(time_init))
 			{
 				return Actions.Accept;
 			}
 		}
 		return Actions.Reject;
+	}
+	
+	private double getFinalPhaseMinUtility() {
+		
+		if (this.finalMinimumUtility == -1) {
+			final AbstractUtilitySpace utilitySpace = negotiationSession.getUtilitySpace();
+			final List<BidDetails> receivedBids = this.negotiationSession.getOpponentBidHistory().getHistory();
+			
+			final int maxIndex = receivedBids.size() - 1;
+			if (maxIndex == -1) {
+				// Edge case if receivedBids length is very small.
+				this.finalMinimumUtility = 0;
+			} else {
+				final double minIndexDouble = (1D - this.windowSlidePercentage) * receivedBids.size();
+				final int minIndex = (int) Math.floor(minIndexDouble);
+				
+				final int length = maxIndex - minIndex + 1;
+				
+				double sum = 0;
+				
+				for (int index = minIndex; index <= maxIndex; index++) {
+					final Bid bid = receivedBids.get(index).getBid();
+					sum += utilitySpace.getUtility(bid);
+				}
+				
+				this.finalMinimumUtility = sum / length;
+			}
+		}
+		return this.finalMinimumUtility;
 	}
 	
 	/*
@@ -95,12 +114,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	}
 	
 	/*
-	 * TODO: this function should return true if the utility of the received bid 
-	 * is higher than some tbd value.The utility that determines this can (and 
-	 * quite possibly, should) be dynamic and decreases over time. In the earlier
-	 * stages of a negotiation, this should be some constant high utility, in such
-	 * a way that it accepts any bid with a utility higher than 0.8, but should become
-	 * lower as time passes. 
+	 * Returns true in case the received bid has an utility higher than or equal to the constant alpha
 	 */
 	public boolean Acceptance_Const(double alpha)
 	{
@@ -110,8 +124,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	
 	
 	/*
-	 * TODO: return true if the current time is past some point T. We should be able to 
-	 * change this T after experimentation and to find the best T possible. 
+	 * Return true if the current time is past some point T.
 	 */
 	public boolean Acceptance_Time(double T)
 	{
