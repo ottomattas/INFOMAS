@@ -32,9 +32,9 @@ public class Group5_BS extends OfferingStrategy {
 	/** Minimal acceptable Utility */
 	private double MinUtil = .5;
 	/** Opponent Model */
-	public OpponentModel model;
+	private OpponentModel model;
 	/** ParetoFrontier */
-	public ParetoFrontier paretoFrontier;
+	private ParetoFrontier paretoFrontier;
 	/** The negotiation session */
 	private NegotiationSession session;
 	/** Preferred bid by the opponent */
@@ -75,7 +75,7 @@ public class Group5_BS extends OfferingStrategy {
 		
 		this.random = new Random();
 	}
-
+	
 	/**
 	 * determineOpeningBid creates a list of bids within the range of 0.7 and 0.8 utility
 	 * and selects a random bid from this created sublist, which is returned and
@@ -126,9 +126,9 @@ public class Group5_BS extends OfferingStrategy {
 	}
 	
 	/**
-	 * Gets the estimated Pareto frontier from the Group5_OMS.java file
-	 * and make bids accordingly. Parts of the getIndexOfBidNearUtility algorithm
-	 * used by SortedOutcomeSpace is also used to set the right bid.
+	 * Gets the estimated Pareto frontier and makes bids accordingly. 
+	 * Parts of the getIndexOfBidNearUtility algorithm used by 
+	 * SortedOutcomeSpace is also used to set the right bid.
 	 * 
 	 * @param time
 	 * @return BidDetails
@@ -211,7 +211,7 @@ public class Group5_BS extends OfferingStrategy {
 	{
 		// Only recalculate the pareto frontier when there is a significant change in preferred bid
 		
-		if (!(OpponentPreferredUtil == model.getBidEvaluation(OpponentPreferredBid))) {
+		if (!(this.OpponentPreferredUtil == model.getBidEvaluation(this.OpponentPreferredBid))) {
 			// Cleanup the old pareto frontier. The utilities which we estimated of the opponent when we 
 			// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
 			final ParetoFrontier paretoFrontier = new ParetoFrontier();
@@ -220,15 +220,43 @@ public class Group5_BS extends OfferingStrategy {
 			
 			final int bidSize = bids.size();
 			
+			this.OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
+			this.OpponentPreferredUtil = model.getBidEvaluation(OpponentPreferredBid);
+			
 			for (int index = 0; index < bidSize; index++) {
 				final BidDetails bidDetail = bids.get(index);
 				final Bid bid = bidDetail.getBid();
-				double opponentUtility = model.getBidEvaluation(bid);
-				double myUtility = session.getUtilitySpace().getUtility(bid);
-				BidPoint bidPoint = new BidPoint(bid, myUtility, opponentUtility);
+				final double opponentUtility = model.getBidEvaluation(bid);
+				final double myUtility = session.getUtilitySpace().getUtility(bid);
+				final BidPoint bidPoint = new BidPoint(bid, myUtility, opponentUtility);
 				paretoFrontier.mergeIntoFrontier(bidPoint);
-		}
+				
+				if (opponentUtility > this.OpponentPreferredUtil) {
+					this.OpponentPreferredBid = bid;
+					this.OpponentPreferredUtil = opponentUtility;
+				};
+			};
 		};
+	}
+	
+	
+	/**
+	 * This function determines if a bid Pareto dominates another bid
+	 * the arguments are the two bids, and a list of biddetails, which 
+	 * should contain the preferences of the opponent, where the first
+	 * element is the most preferred by the opponent, and the latest
+	 * element is the least preferred by the opponent.  
+	 */
+	public boolean Dominates (BidDetails bid, BidDetails bid2, List<BidDetails> opponentUtility)
+	{
+		if (bid.compareTo(bid2) != 1)
+		{
+			if (opponentUtility.indexOf(bid) <= opponentUtility.indexOf(bid2))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	@Override
