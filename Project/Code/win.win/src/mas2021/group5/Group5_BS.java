@@ -4,7 +4,6 @@ package mas2021.group5;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.function.Consumer;
 
 import genius.core.Bid;
 import genius.core.bidding.BidDetails;
@@ -39,30 +38,42 @@ public class Group5_BS extends OfferingStrategy {
 	/** The negotiation session */
 	private NegotiationSession session;
 	/** Preferred bid by the opponent */
-	Bid OpponentPreferredBid;
+	private Bid OpponentPreferredBid;
 	/** Utility of the Preferred bid by the opponent */
-	double OpponentPreferredUtil = 0.0;
+	double OpponentPreferredUtil = -1;
 	
+	private Random random;
+	
+	
+	// Constants to be used in the opening phase
+	// This determines the range of bids sent in this phase.
+	final double openingRangeStart = 0.7;
+	final double openingRangeEnd = 0.8;
+	
+	// Add this constant proportionally w.r.t. time/switchTime to the opening range
+	final double rangeMaxMove = 0.2;
 	
 	/**
 	 * Method which initializes the agent by setting all parameters. The
 	 * parameter "e" is the only parameter which is required.
 	 */
 	@Override
-	public void init(NegotiationSession negoSession, OpponentModel Omodel, OMStrategy oms,
+	public void init(NegotiationSession negotationSession, OpponentModel opponentModel, OMStrategy opponentModelStrategy,
 			Map<String, Double> parameters) throws Exception {
-		super.init(negoSession, parameters);
-		this.negotiationSession = negoSession;
+		super.init(negotationSession, parameters);
+		this.negotiationSession = negotationSession;
 
-		outcomespace = new SortedOutcomeSpace(negotiationSession.getUtilitySpace());
-		negotiationSession.setOutcomeSpace(outcomespace);
+		this.outcomespace = new SortedOutcomeSpace(negotiationSession.getUtilitySpace());
+		this.negotiationSession.setOutcomeSpace(outcomespace);
 
-		this.model = Omodel;
+		this.model = opponentModel;
 		
-		paretoFrontier = null;
-		session = negotiationSession;
-		outcomespace = new SortedOutcomeSpace(session.getUtilitySpace());
-		OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
+		this.paretoFrontier = null;
+		this.session = negotiationSession;
+		this.outcomespace = new SortedOutcomeSpace(session.getUtilitySpace());
+		this.OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
+		
+		this.random = new Random();
 	}
 	
 	/**
@@ -72,10 +83,7 @@ public class Group5_BS extends OfferingStrategy {
 	 */
 	@Override
 	public BidDetails determineOpeningBid() {
-		Range r = new Range(0.7,0.8);
-		List<BidDetails> t = outcomespace.getBidsinRange(r);
-		Random Rand = new Random();
-		return t.get(Rand.nextInt(t.size()));
+		return this.openingPhase(0);
 	}
 
 	/**
@@ -93,9 +101,9 @@ public class Group5_BS extends OfferingStrategy {
 		BidDetails nextBid;
 		
 		if (time <= switchTime) {
-			nextBid = openingphase(time);
+			nextBid = openingPhase(time);
 		} else {
-			nextBid = laterphase(time);
+			nextBid = laterPhase(time);
 		}
 		
 		return nextBid;
@@ -108,13 +116,12 @@ public class Group5_BS extends OfferingStrategy {
 	 * @param time
 	 * @return BidDetails
 	 */
-	public BidDetails openingphase(double time)
+	public BidDetails openingPhase(double time)
 	{
-		
-		Range r = new Range(0.7+(0.2*(time/switchTime)),0.8+(0.2*(time/switchTime)));
-		List<BidDetails> t = outcomespace.getBidsinRange(r);
-		Random Rand = new Random();
-		return t.get(Rand.nextInt(t.size()));
+		final double delta = this.rangeMaxMove * (time/switchTime);
+		final Range range = new Range(this.openingRangeStart+delta,this.openingRangeEnd+delta);
+		final List<BidDetails> bids = outcomespace.getBidsinRange(range);
+		return bids.get(this.random.nextInt(bids.size()));
 		
 	}
 	
@@ -128,12 +135,13 @@ public class Group5_BS extends OfferingStrategy {
 	 * 
 	 * Adapted from SortedOutcomeSpace.class
 	 */
-	public BidDetails laterphase(double time)
+	public BidDetails laterPhase(double time)
 	{
 		CalculatePareto();
 		List<BidPoint> Pareto = paretoFrontier.getFrontier();
-		double utility = 1-(1-MinUtil)*((time-switchTime)/(1-switchTime));
-		int index = searchIndexWith(utility, Pareto);
+		final double multiplier = (time-switchTime)/(1-switchTime);
+		final double utility = 1-(1-MinUtil)*multiplier;
+		final int index = searchIndexWith(utility, Pareto);
 		int newIndex = -1;
 		double closestDistance = Math.abs(Pareto.get(index).getUtilityA() - utility);
 		
@@ -154,7 +162,7 @@ public class Group5_BS extends OfferingStrategy {
 			newIndex = index;
 		}
 		
-		BidDetails newBid = new BidDetails(Pareto.get(newIndex).getBid(),Pareto.get(newIndex).getUtilityA());
+		final BidDetails newBid = new BidDetails(Pareto.get(newIndex).getBid(),Pareto.get(newIndex).getUtilityA());
 		
 		return newBid;
 		
@@ -202,60 +210,36 @@ public class Group5_BS extends OfferingStrategy {
 	public void CalculatePareto()
 	{
 		// Only recalculate the pareto frontier when there is a significant change in preferred bid
-		
-		if (!(OpponentPreferredUtil == model.getBidEvaluation(OpponentPreferredBid))) {
-		// Cleanup the old pareto frontier. The utilities which we estimated of the opponent when we 
-		// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
-		paretoFrontier = new ParetoFrontier();
-		
-		OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
-		OpponentPreferredUtil = model.getBidEvaluation(OpponentPreferredBid);
-		
-		List<BidDetails> bids = outcomespace.getOrderedList();
-		
-		bids.forEach(new Consumer<BidDetails>() {
-			@Override 
-			public void accept(BidDetails bidDetail) {
-				Bid bid = bidDetail.getBid();
-				double opponentUtility = model.getBidEvaluation(bid);
-				double myUtility = session.getUtilitySpace().getUtility(bid);
-				BidPoint bidPoint = new BidPoint(bid, myUtility, opponentUtility);
+		// There is an edge case where the pareto frontier is not yet created (then OpponentPreferredUtil = -1)
+		// In that case, force the frontier generation.
+		if (this.OpponentPreferredUtil == -1 || !(this.OpponentPreferredUtil == model.getBidEvaluation(this.OpponentPreferredBid))) {
+			// Cleanup the old pareto frontier. The utilities which we estimated of the opponent when we 
+			// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
+			final ParetoFrontier paretoFrontier = new ParetoFrontier();
+			
+			final List<BidDetails> bids = outcomespace.getOrderedList();
+			
+			final int bidSize = bids.size();
+			
+			this.OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
+			this.OpponentPreferredUtil = model.getBidEvaluation(OpponentPreferredBid);
+			
+			for (int index = 0; index < bidSize; index++) {
+				final BidDetails bidDetail = bids.get(index);
+				final Bid bid = bidDetail.getBid();
+				final double opponentUtility = model.getBidEvaluation(bid);
+				final double myUtility = session.getUtilitySpace().getUtility(bid);
+				final BidPoint bidPoint = new BidPoint(bid, myUtility, opponentUtility);
 				paretoFrontier.mergeIntoFrontier(bidPoint);
 				
-				if (opponentUtility > OpponentPreferredUtil) {
-					OpponentPreferredBid = bid;
-					OpponentPreferredUtil = opponentUtility;
+				if (opponentUtility > this.OpponentPreferredUtil) {
+					this.OpponentPreferredBid = bid;
+					this.OpponentPreferredUtil = opponentUtility;
 				};
-			}
-		});
+			};
+			
+			this.paretoFrontier = paretoFrontier;
 		};
-	}
-	
-	
-	/**
-	 * This function determines if a bid Pareto dominates another bid
-	 * the arguments are the two bids, and a list of biddetails, which 
-	 * should contain the preferences of the opponent, where the first
-	 * element is the most preferred by the opponent, and the latest
-	 * element is the least preferred by the opponent.  
-	 */
-	public boolean Dominates (BidDetails bid, BidDetails bid2, List<BidDetails> opponentUtility)
-	{
-		if (bid.compareTo(bid2) != 1)
-		{
-			if (opponentUtility.indexOf(bid) <= opponentUtility.indexOf(bid2))
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
 	}
 	
 	@Override
