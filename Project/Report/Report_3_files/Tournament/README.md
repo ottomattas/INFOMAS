@@ -3,12 +3,7 @@ Overall, agent 1 = opponent; agent 2 = win.win.
 Also, whenever there was a session in a tournament which included the same preference profile for both agents, the results of that specific session were pruned.
 
 ## Assignment A
-Tournaments were ran on five domains, with preference profiles flipped every 20 sessions:
-- FiftyFifty2013_domain
-- Domain8
-- Ultimatum
-- Animal
-- Travel-A-domain
+All sessions are ran with preference certainty. The tournament was ran on the party domain.
 
 ## Assignment B
 Tournaments were ran on five domains, with all available Acceptance Strategies in Genius against our Acceptance Strategy:
