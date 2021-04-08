@@ -29,7 +29,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	private Bid lastOwnBid;
 	
 	private final double alpha = 1.02;
-	private final double alpha_init = 199.675;
+	private final double alpha_init = 0.675;
 	private final double beta = 0.005;
 	
 	// Part of the negotiation time where the agent is in the initialization phase
