@@ -1,8 +1,39 @@
 # Genius Tournaments Ran for Analysis
-Agent 1 = opponent
-Agent 2 = win.win
+Overall, agent 1 = opponent; agent 2 = win.win.
+Also, whenever there was a session in a tournament which included the same preference profile for both agents, the results of that specific session were pruned.
 
-Excluded agents
+## Assignment A
+Tournaments were ran on five domains, with preference profiles flipped every 20 sessions:
+- FiftyFifty2013_domain
+- Domain8
+- Ultimatum
+- Animal
+- Travel-A-domain
+
+## Assignment B
+Tournaments were ran on five domains, with all available Acceptance Strategies in Genius against our Acceptance Strategy:
+- FiftyFifty2013_domain
+- Domain8
+- Ultimatum
+- Animal
+- Travel-A-domain
+
+## Assignment C
+Tournaments were ran on five domains, with all available Opponent Models in Genius against our Opponent Model:
+- FiftyFifty2013_domain
+- Domain8
+- Ultimatum
+- Animal
+- Travel-A-domain
+
+## Assignment D
+All sessions include at least one agent with preference uncertainty. The tournament was ran on the party domain.
+
+## Assignment E
+This is the most extensive tournament setup as we will use it for our baseline performance measurement.
+After analysis, we use this data to improve our agent and discuss generality of our agent.
+
+Excluded agents:
 - UIAgent
 - UIAgentExtended
 - CounterOfferHumanNegotiationParty
@@ -19,7 +50,6 @@ Excluded agents
 - Aster
 - Atlas
 
-## Assignment E
 ### 1 - FiftyFifty2013_domain
 small amount of issues, large amount of values
 
