@@ -9,24 +9,7 @@ import genius.core.boaframework.Actions;
 import genius.core.uncertainty.UserModel;
 import genius.core.utility.AbstractUtilitySpace;
 
-/**
- * Accepts:
- * <ul>
- * <li>if we have uncertainty profile, and we receive an offer in our highest
- * 10% best bids.
- * <li>if we have normal utilityspace, and we receive offer with a utility
- * better than 90% of what we offered last.
- * </ul>
- * Discount is ignored.
- */
 public class Group5_AS extends AcceptanceStrategy {
-
-	/*
-	 * TODO: this function should return Actions.Accept if and only if
-	 * AC_combined-init is true (refer to report 2 for a specific description)
-	 * for each individual Acceptance condition, there are seperate functions
-	 * defined below. 
-	 */
 	private Bid receivedBid;
 	private Bid lastOwnBid;
 	
