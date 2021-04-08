@@ -40,7 +40,7 @@ public class Group5_BS extends OfferingStrategy {
 	/** Preferred bid by the opponent */
 	private Bid OpponentPreferredBid;
 	/** Utility of the Preferred bid by the opponent */
-	double OpponentPreferredUtil = 0.0;
+	double OpponentPreferredUtil = -1;
 	
 	private Random random;
 	
@@ -210,8 +210,9 @@ public class Group5_BS extends OfferingStrategy {
 	public void CalculatePareto()
 	{
 		// Only recalculate the pareto frontier when there is a significant change in preferred bid
-		
-		if (!(this.OpponentPreferredUtil == model.getBidEvaluation(this.OpponentPreferredBid))) {
+		// There is an edge case where the pareto frontier is not yet created (then OpponentPreferredUtil = -1)
+		// In that case, force the frontier generation.
+		if (this.OpponentPreferredUtil == -1 || !(this.OpponentPreferredUtil == model.getBidEvaluation(this.OpponentPreferredBid))) {
 			// Cleanup the old pareto frontier. The utilities which we estimated of the opponent when we 
 			// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
 			final ParetoFrontier paretoFrontier = new ParetoFrontier();
@@ -236,6 +237,8 @@ public class Group5_BS extends OfferingStrategy {
 					this.OpponentPreferredUtil = opponentUtility;
 				};
 			};
+			
+			this.paretoFrontier = paretoFrontier;
 		};
 	}
 	
