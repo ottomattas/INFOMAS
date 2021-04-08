@@ -33,11 +33,11 @@ public class Group5_BS extends OfferingStrategy {
 	/** Minimal acceptable Utility */
 	private double MinUtil = .5;
 	/** Opponent Model */
-	public OpponentModel model;
+	private OpponentModel model;
 	/** ParetoFrontier */
-	public ParetoFrontier paretoFrontier;
+	private ParetoFrontier paretoFrontier;
 	/** The negotiation session */
-	NegotiationSession session;
+	private NegotiationSession session;
 	/** Preferred bid by the opponent */
 	Bid OpponentPreferredBid;
 	/** Utility of the Preferred bid by the opponent */
@@ -64,7 +64,7 @@ public class Group5_BS extends OfferingStrategy {
 		outcomespace = new SortedOutcomeSpace(session.getUtilitySpace());
 		OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
 	}
-
+	
 	/**
 	 * determineOpeningBid creates a list of bids within the range of 0.7 and 0.8 utility
 	 * and selects a random bid from this created sublist, which is returned and
@@ -119,9 +119,9 @@ public class Group5_BS extends OfferingStrategy {
 	}
 	
 	/**
-	 * Gets the estimated Pareto frontier from the Group5_OMS.java file
-	 * and make bids accordingly. Parts of the getIndexOfBidNearUtility algorithm
-	 * used by SortedOutcomeSpace is also used to set the right bid.
+	 * Gets the estimated Pareto frontier and makes bids accordingly. 
+	 * Parts of the getIndexOfBidNearUtility algorithm used by 
+	 * SortedOutcomeSpace is also used to set the right bid.
 	 * 
 	 * @param time
 	 * @return BidDetails
@@ -208,6 +208,9 @@ public class Group5_BS extends OfferingStrategy {
 		// updated this the last time, might be obsolete, so we should regenerate the entire frontier.
 		paretoFrontier = new ParetoFrontier();
 		
+		OpponentPreferredBid = outcomespace.getBidNearUtility(1.0).getBid();
+		OpponentPreferredUtil = model.getBidEvaluation(OpponentPreferredBid);
+		
 		List<BidDetails> bids = outcomespace.getOrderedList();
 		
 		bids.forEach(new Consumer<BidDetails>() {
@@ -218,6 +221,11 @@ public class Group5_BS extends OfferingStrategy {
 				double myUtility = session.getUtilitySpace().getUtility(bid);
 				BidPoint bidPoint = new BidPoint(bid, myUtility, opponentUtility);
 				paretoFrontier.mergeIntoFrontier(bidPoint);
+				
+				if (opponentUtility > OpponentPreferredUtil) {
+					OpponentPreferredBid = bid;
+					OpponentPreferredUtil = opponentUtility;
+				};
 			}
 		});
 		};
