@@ -29,7 +29,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	private Bid lastOwnBid;
 	
 	private final double alpha = 1.02;
-	private final double alpha_init = 0.675;
+	private final double alpha_init = 199.675;
 	private final double beta = 0.005;
 	
 	// Part of the negotiation time where the agent is in the initialization phase
@@ -95,12 +95,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	}
 	
 	/*
-	 * TODO: this function should return true if the utility of the received bid 
-	 * is higher than some tbd value.The utility that determines this can (and 
-	 * quite possibly, should) be dynamic and decreases over time. In the earlier
-	 * stages of a negotiation, this should be some constant high utility, in such
-	 * a way that it accepts any bid with a utility higher than 0.8, but should become
-	 * lower as time passes. 
+	 * Returns true in case the received bid has an utility higher than or equal to a the constant alpha
 	 */
 	public boolean Acceptance_Const(double alpha)
 	{
@@ -110,8 +105,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	
 	
 	/*
-	 * TODO: return true if the current time is past some point T. We should be able to 
-	 * change this T after experimentation and to find the best T possible. 
+	 * Return true if the current time is past some point T.
 	 */
 	public boolean Acceptance_Time(double T)
 	{
