@@ -85,7 +85,6 @@ public class Group5_AS extends AcceptanceStrategy {
 				}
 				
 				this.finalMinimumUtility = sum / length;
-				
 			}
 		}
 		return this.finalMinimumUtility;
