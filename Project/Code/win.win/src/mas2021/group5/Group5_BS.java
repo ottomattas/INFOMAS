@@ -89,7 +89,7 @@ public class Group5_BS extends OfferingStrategy {
 	/**
 	 * Offering strategy based on Pareto frontiers and initial confusion of the opponent.
 	 * Up until switchTime is reached, openingphase() will be triggered. This function returns random bids
-	 * with rising utility for this agent. After switchTime is reached, the function laterphase() is
+	 * with rising utility for this agent. After switchTime is reached, the function mainPhase() is
 	 * triggered, which slowly walks down in utility along the estimated Pareto Frontier until
 	 * the end of the negotiation. This may be acceptance of the bid or the end of the session.
 	 * 
@@ -103,7 +103,7 @@ public class Group5_BS extends OfferingStrategy {
 		if (time <= switchTime) {
 			nextBid = openingPhase(time);
 		} else {
-			nextBid = laterPhase(time);
+			nextBid = mainPhase(time);
 		}
 		
 		return nextBid;
@@ -135,7 +135,7 @@ public class Group5_BS extends OfferingStrategy {
 	 * 
 	 * Adapted from SortedOutcomeSpace.class
 	 */
-	public BidDetails laterPhase(double time)
+	public BidDetails mainPhase(double time)
 	{
 		CalculatePareto();
 		List<BidPoint> Pareto = paretoFrontier.getFrontier();
