@@ -242,26 +242,6 @@ public class Group5_BS extends OfferingStrategy {
 		};
 	}
 	
-	
-	/**
-	 * This function determines if a bid Pareto dominates another bid
-	 * the arguments are the two bids, and a list of biddetails, which 
-	 * should contain the preferences of the opponent, where the first
-	 * element is the most preferred by the opponent, and the latest
-	 * element is the least preferred by the opponent.  
-	 */
-	public boolean Dominates (BidDetails bid, BidDetails bid2, List<BidDetails> opponentUtility)
-	{
-		if (bid.compareTo(bid2) != 1)
-		{
-			if (opponentUtility.indexOf(bid) <= opponentUtility.indexOf(bid2))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	@Override
 	public String getName() {
 		return "Group5 win.win Bidding Strategy";
