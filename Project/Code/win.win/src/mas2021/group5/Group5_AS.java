@@ -95,7 +95,7 @@ public class Group5_AS extends AcceptanceStrategy {
 	}
 	
 	/*
-	 * Returns true in case the received bid has an utility higher than or equal to a the constant alpha
+	 * Returns true in case the received bid has an utility higher than or equal to the constant alpha
 	 */
 	public boolean Acceptance_Const(double alpha)
 	{
