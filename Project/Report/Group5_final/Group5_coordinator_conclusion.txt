@@ -1,0 +1,7 @@
+The team consisted of four people with different backgrounds. Two members are part of the AI program, one member comes from the Computing Science program and one member is from the Energy Science. Two members come with experience in Java programming and the other two have experience with game theory and probability theory. This created a balanced and mixed background for the team.
+
+In the beginning of the project, the team had to spend some time building trust and finding a way of working that would suit all members. Two weekly standup meetings were set up in addition to the class sessions which proved immensely beneficial for the progress of the team. In general, we worked asynchronously a lot which also proved a great approach.
+
+Although there were some constraints to the end result, mainly time, all members contributed equally to designing and implementing the agent and writing the reports.
+
+Most importantly, we set a goal of having fun in this class with the project and I believe we succeeded. I thank my team for all the effort and all the fun. Also I thank you for the opportunity!
